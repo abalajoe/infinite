@@ -22,3 +22,11 @@
 [2014-12-18 01:10:48,311][INFO][infinite.core] #<JFrame javax.swing.JFrame[frame10,0,0,0x0,invalid,hidden,layout=java.awt.BorderLayout,title=Duste Inventory,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,0x0,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]> initializing frame..
 [2014-12-18 01:12:12,805][INFO][infinite.core] #<JFrame javax.swing.JFrame[frame11,0,0,0x0,invalid,hidden,layout=java.awt.BorderLayout,title=Duste Inventory,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,0x0,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]> initializing frame..
 [2014-12-18 01:12:48,841][INFO][infinite.core] #<JFrame javax.swing.JFrame[frame12,0,0,0x0,invalid,hidden,layout=java.awt.BorderLayout,title=Duste Inventory,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,0x0,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]> initializing frame..
+[2014-12-20 13:36:00,785][INFO][infinite.core] #<JFrame javax.swing.JFrame[frame0,0,0,0x0,invalid,hidden,layout=java.awt.BorderLayout,title=Duste Inventory,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,0x0,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]> initializing frame..
+[2014-12-20 13:40:55,600][INFO][infinite.core] Cancel Button Pressed
+[2014-12-20 13:41:01,305][INFO][infinite.core] Login Button Pressed
+[2014-12-20 13:41:07,400][INFO][infinite.core] Login Button Pressed
+[2014-12-20 13:41:16,866][INFO][infinite.core] Login Button Pressed
+[2014-12-20 13:41:22,999][INFO][infinite.core] Exit Button Pressed
+[2014-12-20 13:48:22,719][INFO][infinite.core] Cancel Button Pressed
+[2014-12-20 13:51:07,718][INFO][infinite.core] Cancel Button Pressed

@@ -1,9 +1,9 @@
 ;;; namespace & libs
 (ns infinite.core
   (:import (javax.swing JOptionPane)
-           (javax.swing JFrame JLabel JDialog JPanel JComboBox JTextField JButton JOptionPane)
+           (javax.swing JFrame JLabel JDialog JPanel JComboBox JTextField JButton JOptionPane BorderFactory)
            (java.awt.event ActionListener ItemListener)
-           (java.awt GridLayout FlowLayout)
+           (java.awt GridBagLayout Insets GridLayout)
            (java.awt Dimension))
   (:require [clojure.tools.logging :as log]
             [model.db :as db]))
@@ -12,31 +12,44 @@
 (def frame)
 
 ;; labels
-(def username-label (new JLabel "username"))
-(def password-label (new JLabel "password"))
+(def username-label (new JLabel "Username"))
+(def password-label (new JLabel "Password"))
 
 ;; textfields
-(def username-field (doto (new JTextField)(.setColumns 15)))
-(def password-field (new JTextField))
+(def username-field (doto (new JTextField)(.setColumns 25)))
+(def password-field (doto (new JTextField)(.setColumns 25)))
 
 ;; buttons
-;(def login-button (new JButton "Login"))
-(def login-button (doto (new JButton "Login")(.setPreferredSize (new Dimension 150 30))))
-(def change-password-button (doto (new JButton "Login")(.setPreferredSize (new Dimension 150 30))))
-(def exit-button (doto (new JButton "Login")(.setPreferredSize (new Dimension 150 30))))
-;(def change-password-button (new JButton "Password"))
-;(def exit-button (new JButton "Exit"))
+(def login-button (doto (new JButton "Login")(.setPreferredSize (new Dimension 70 20))))
+(def cancel-button (doto (new JButton "Cancel")(.setPreferredSize (new Dimension 70 20))))
+(def exit-button (doto (new JButton "Exit")(.setPreferredSize (new Dimension 70 20))))
 
-;; combo box
-(def combox
-  (let [combobox (JComboBox. (java.util.Vector. ['a 'b 'c]))]
-    (.addItemListener combobox
-                      (proxy [ItemListener] []
-                        (itemStateChanged [item-event]
-                          (println (str "selection changed to "
-                                        (.getSelectedItem combobox))))))))
-(def combo-values ["joe" "abala"])
-;(def combobox (new JComboBox(java.util.Vector. (db/get-brands) )))
+;; macro for setting gridbaglayout constraints
+(defmacro set-grid! [constraints field value]
+  `(set! (. ~constraints ~(symbol (name field)))
+         ~(if (keyword? value)
+            `(. java.awt.GridBagConstraints
+                ~(symbol (name value)))
+            value)))
+
+;; macro to add components to a container
+(defmacro grid-bag-layout [container & body]
+  (let [c (gensym "c")
+        cntr (gensym "cntr")]
+    `(let [~c (new java.awt.GridBagConstraints)
+           ~cntr ~container]
+       ~@(loop [result '() body body]
+           (if (empty? body)
+             (reverse result)
+             (let [expr (first body)]
+               (if (keyword? expr)
+                 (recur (cons `(set-grid! ~c ~expr
+                                          ~(second body))
+                              result)
+                        (next (next body)))
+                 (recur (cons `(.add ~cntr ~expr ~c)
+                              result)
+                        (next body)))))))))
 
 ;; login button action
 (. login-button addActionListener
@@ -44,7 +57,8 @@
      (actionPerformed [e]
        (log/info "Login Button Pressed")
        ; get username and password entered by user
-       (let [username (. username-field (getText)) password (. password-field (getText))]
+       (let [username (. username-field (getText))
+             password (. password-field (getText))]
          ; check if the user enters all fields
          (if (or (empty? username)(empty? password))
            (JOptionPane/showMessageDialog
@@ -66,10 +80,11 @@
                      JOptionPane/ERROR_MESSAGE)))))))))
 
 ;; change password button action
-(. change-password-button addActionListener
+(. cancel-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
-       (log/info "Password Button Pressed"))))
+       (log/info "Cancel Button Pressed")
+       )))
 
 ;; exit button action
 (. exit-button addActionListener
@@ -79,57 +94,41 @@
        ; terminate application
        (System/exit 0))))
 
-;; the top panel
-(def top-panel
-  (doto
-    (JPanel.)
-    ; set the layout of the panel
-    (.setLayout (new GridLayout 2 2))
-    ; set the size of the panel
-    (.setPreferredSize (new Dimension 600 100))
-    ; add components to panel
-    (.add username-label)
-    ;(.add combobox)
-    (.add username-field)
-    (.add password-label)
-    (.add password-field)))
+;; login panel
+(def login-panel
+  ; use gridbaglayout as layout engine
+  (doto (JPanel. (GridBagLayout.))
+    ; set title for panel
+    (.setBorder(BorderFactory/createTitledBorder "Login"))
+    ; style the components
+    (grid-bag-layout
+      :fill :BOTH, :insets (Insets. 5 1 1 5)
+      :gridx 0, :gridy 0, :anchor :LINE_START
+      username-label
+      :fill :HORIZONTAL, :insets (Insets. 1 1 1 1)
+      :gridx 1, :gridy 0,:anchor :LINE_END
+      username-field
+      :fill :HORIZONTAL, :insets (Insets. 2 2 2 2)
+      :gridx 0, :gridy 1, :anchor :LINE_START
+      password-label
+      :fill :HORIZONTAL, :insets (Insets. 1 1 1 1)
+      :gridx 1, :gridy 1,:anchor :LINE_END
+      password-field
+      :gridx 1, :gridy 2
+      login-button
+      :gridx 1, :gridy 3
+      cancel-button
+      :gridx 1, :gridy 4
+      exit-button)))
 
-;; the bottom panel
-(def bottom-panel
-  (doto
-    (JPanel.)
-    ; set the layout of the panel
-    (.setLayout (new FlowLayout))
-    ; set the size of the panel
-    (.setPreferredSize (new Dimension 600 50))
-    ; add components to the panel
-    (.add login-button )
-    (.add change-password-button)
-    (.add exit-button)))
-;btn.setPreferredSize(new Dimension(40, 40));
-;; main frame
-(def frame
-  (doto
-    ; initialize jframe
-    (new JFrame "Duste Inventory")
-    (log/info "initializing frame..")
-    ; set layout
-    (.setLayout (new GridLayout 2 1 3 3))
-    ; set closing frame behaviour
-    (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
-    ; add components
-    (.add top-panel)
-    (.add bottom-panel)
-    ; package components
-    (.setSize 600 200)
-    ; display frame
+;; login frame
+(def login-frame
+  (doto (JFrame. "INFINITE INVENTORY SYSTEM")
+    ; set login panel to frame
+    (.setContentPane login-panel)
+    ; set size of frame
+    (.setSize 800 300)
+    ; make frame visible
     (.setVisible true)
-    ; place frame in the middle of screen
+    ; position frame at center of screen
     (.setLocationRelativeTo nil)))
-
-(defn -main
-  "The application's main function"
-  [& args]
-  frame)
-
-(-main)
