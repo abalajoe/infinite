@@ -24,8 +24,34 @@
 (defn list-admin []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
-   (sql/with-query-results rows ["select * from login"]      ; execute query
+   (sql/with-query-results rows ["select * from tbl_login"]      ; execute query
     (log/info rows )rows)))
+
+(defn delete-admin
+  "Function deletes an admin"
+  [id]
+  (log/infof "[delete-admin] function exec" )
+  (try
+    (let [sql "delete from tbl_login where id = ?"]
+      (sql/with-connection db
+                           (sql/do-prepared sql [id])))
+    (catch SQLException e
+      (log/errorf "SQLException delete-admin [%s]" e))
+    (catch Exception e
+      (log/errorf "Exception delete-admin [%s]" e))))
+
+(defn update-admin
+  "Function updates administrator"
+  [password id]
+  (log/infof "[delete-admin] function exec" )
+  (try
+    (let [sql "update tbl_login set password = ? where id = ?"]
+      (sql/with-connection db
+                           (sql/do-prepared sql [password id])))
+    (catch SQLException e
+      (log/errorf "SQLException update-admin [%s]" e))
+    (catch Exception e
+      (log/errorf "Exception update-admin [%s]" e))))
 
 ;(list-admin)
 ;(:username (nth(list-admin)2))
@@ -67,11 +93,19 @@
                                                (println rows )
                                                (count rows))))
 
-(defn insert-admin [username password]
+(defn insert-admin
   "Function inserts admin to db"
-  (let [sql "insert into inventoryapp.login (username,password) values (? , ? )"]
-    (sql/with-connection db
-                         (sql/do-prepared sql [username password] ))))
+  [username password]
+  (try
+    (let [sql "insert into inventoryapp.tbl_login (username,password,date_added) values (? , ? , NOW())"]
+      (sql/with-connection db
+        (sql/do-prepared sql [username password])))
+    (catch SQLException sql
+      (log/error "insert admin SQLE >> " (.getMessage sql)))
+    (catch Exception e
+      (log/error "insert admin E >> " (.getMessage e)))))
+
+;(insert-admin "joe" "jwizzy")
 
 (defn insert-inventory [liquor brand size quantity price]
   "Function inserts inventory to db"
@@ -190,31 +224,7 @@
 
 ;(create-users)
 ;(list-users)
-(defn delete-admin
-  "Function deletes an admin"
-  [id]
-  (log/infof "[delete-admin] function exec" )
-  (try
-    (let [sql "delete from login where id = ?"]
-      (sql/with-connection db
-                           (sql/do-prepared sql [id])))
-    (catch SQLException e
-      (log/errorf "SQLException delete-admin [%s]" e))
-    (catch Exception e
-      (log/errorf "Exception delete-admin [%s]" e))))
 
-(defn update-admin
-  "Function updates administrator"
-  [password id]
-  (log/infof "[delete-admin] function exec" )
-  (try
-    (let [sql "update login set password = ? where id = ?"]
-      (sql/with-connection db
-                           (sql/do-prepared sql [password id])))
-    (catch SQLException e
-      (log/errorf "SQLException update-admin [%s]" e))
-    (catch Exception e
-      (log/errorf "Exception update-admin [%s]" e))))
 
 
 

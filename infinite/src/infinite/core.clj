@@ -1,15 +1,17 @@
 ;;; namespace & libs
 (ns infinite.core
   (:import (javax.swing JOptionPane)
-           (javax.swing JFrame JLabel JDialog JPanel JComboBox JTextField JButton JOptionPane BorderFactory)
-           (java.awt.event ActionListener ItemListener)
-           (java.awt GridBagLayout Insets GridLayout)
+           (javax.swing JFrame JLabel JPanel JTextField JButton JOptionPane BorderFactory)
+           (java.awt.event ActionListener)
+           (java.awt GridBagLayout Insets)
            (java.awt Dimension))
   (:require [clojure.tools.logging :as log]
-            [model.db :as db]))
+            [model.db :as db]
+            [util.utils :as utl]
+            [infinite.main :as main]))
 
 ;; main frame
-(def frame)
+(def login-frame)
 
 ;; labels
 (def username-label (new JLabel "Username"))
@@ -24,41 +26,14 @@
 (def cancel-button (doto (new JButton "Cancel")(.setPreferredSize (new Dimension 70 20))))
 (def exit-button (doto (new JButton "Exit")(.setPreferredSize (new Dimension 70 20))))
 
-;; macro for setting gridbaglayout constraints
-(defmacro set-grid! [constraints field value]
-  `(set! (. ~constraints ~(symbol (name field)))
-         ~(if (keyword? value)
-            `(. java.awt.GridBagConstraints
-                ~(symbol (name value)))
-            value)))
-
-;; macro to add components to a container
-(defmacro grid-bag-layout [container & body]
-  (let [c (gensym "c")
-        cntr (gensym "cntr")]
-    `(let [~c (new java.awt.GridBagConstraints)
-           ~cntr ~container]
-       ~@(loop [result '() body body]
-           (if (empty? body)
-             (reverse result)
-             (let [expr (first body)]
-               (if (keyword? expr)
-                 (recur (cons `(set-grid! ~c ~expr
-                                          ~(second body))
-                              result)
-                        (next (next body)))
-                 (recur (cons `(.add ~cntr ~expr ~c)
-                              result)
-                        (next body)))))))))
-
 ;; login button action
 (. login-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
        (log/info "Login Button Pressed")
        ; get username and password entered by user
-       (let [username (. username-field (getText))
-             password (. password-field (getText))]
+       (let [username (.getText username-field)
+             password (.getText password-field)]
          ; check if the user enters all fields
          (if (or (empty? username)(empty? password))
            (JOptionPane/showMessageDialog
@@ -69,9 +44,9 @@
              (if (= (db/login username password ) 1)
                (do
                  ; close current jframe
-                 (.dispose frame)
+                 (.dispose login-frame)
                  ; open main frame
-                 ; (mn/call-frame)
+                 (main/exec-main-frame)
                  (log/info "success")
                  )
                (do (log/info "credentials incorrect!!")
@@ -83,8 +58,9 @@
 (. cancel-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
-       (log/info "Cancel Button Pressed")
-       )))
+       (.setText username-field "")                         ; clear username field
+       (.setText password-field "")                         ; clear password field
+       (log/info "Cancel Button Pressed"))))
 
 ;; exit button action
 (. exit-button addActionListener
@@ -101,7 +77,7 @@
     ; set title for panel
     (.setBorder(BorderFactory/createTitledBorder "Login"))
     ; style the components
-    (grid-bag-layout
+    (utl/grid-bag-layout
       :fill :BOTH, :insets (Insets. 5 1 1 5)
       :gridx 0, :gridy 0, :anchor :LINE_START
       username-label
