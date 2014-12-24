@@ -27,6 +27,18 @@
    (sql/with-query-results rows ["select * from tbl_login"]      ; execute query
     (log/info rows )rows)))
 
+(defn list-login-logs []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select * from tbl_login_logs"]      ; execute query
+    (log/info rows )rows)))
+
+(defn list-audit-logs []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select * from tbl_audit_logs"]      ; execute query
+     (log/info rows )rows)))
+
 (defn delete-admin
   "Function deletes an admin"
   [id]
@@ -107,6 +119,34 @@
 
 ;(insert-admin "joe" "jwizzy")
 
+(defn insert-login-logs
+  "Function inserts login logs to db"
+  [username]
+  (try
+    (let [sql "insert into inventoryapp.tbl_login_logs (username,login_time) values (? , NOW())"]
+      (sql/with-connection db
+        (sql/do-prepared sql [username])))
+    (catch SQLException sql
+      (log/error "insert login logs SQLE >> " (.getMessage sql)))
+    (catch Exception e
+      (log/error "insert login logs E >> " (.getMessage e)))))
+
+;(insert-login-logs "joe")
+
+(defn insert-audit-logs
+  "Function inserts audit logs to db"
+  [username action description]
+  (try
+    (let [sql "insert into inventoryapp.tbl_audit_logs (username,action,description,operation_time) values (? , ? , ? ,  NOW())"]
+      (sql/with-connection db
+        (sql/do-prepared sql [username action description])))
+    (catch SQLException sql
+      (log/error "insert audit logs SQLE >> " (.getMessage sql)))
+    (catch Exception e
+      (log/error "insert audit logs E >> " (.getMessage e)))))
+
+;(insert-audit-logs "joe" "add admin" "successfull")
+
 (defn insert-inventory [liquor brand size quantity price]
   "Function inserts inventory to db"
   (let [sql "insert into inventoryapp.tbl_inventory (liquor,brand,size,quantity,price,date) values (?, ?, ?, ?, ?, NOW())"]
@@ -127,9 +167,9 @@
 
 (defn login [^String username ^String password]
   (sql/with-connection db
-                       (sql/with-query-results rs ["select * from login where username=? and password=?" username password]
-                                               (dorun (map #(println %) rs))
-                                               (count rs))))
+     (sql/with-query-results rs ["select * from login where username=? and password=?" username password]
+       (dorun (map #(println %) rs))
+         (count rs))))
 
 ;(login "abala" "abalat")
 

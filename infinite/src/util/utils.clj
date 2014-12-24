@@ -1,8 +1,9 @@
 ;; namespace & libs
 ;; Namespace contains helper functions
 (ns util.utils
-  (:import (javax.swing JOptionPane JTable)
-           (javax.swing.table AbstractTableModel))
+  (:import (javax.swing JOptionPane JTable SwingUtilities JFrame JPanel JScrollPane)
+           (javax.swing.table AbstractTableModel)
+           (java.awt GridLayout Dimension))
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str])
   (:require [clojure.tools.logging :as log]))
@@ -64,12 +65,6 @@
                               result)
                         (next body)))))))))
 
-;; table instance used for display
-(def show-admin-table (JTable.))
-
-;; table instance for editing
-(def edit-admin-table (JTable.))
-
 ;; table model
 (defn model [rows col-names value-at]
   (proxy [AbstractTableModel] []
@@ -79,3 +74,29 @@
       (clojure.string/upper-case(.substring (nth col-names c)1)))            ;remove colon from column name using substring and capitalize column names
     (getValueAt [r c]  (value-at r c))
     (isCellEditable [r c] false)))
+
+(defn display-table [data title table]
+  "This table shows all the administrators
+  for the system and does not allow editing"
+  (def rows data)
+  (. SwingUtilities invokeLater
+     (fn []
+       (doto (JFrame. title)
+         (.setDefaultCloseOperation (. JFrame HIDE_ON_CLOSE))
+         (.setContentPane
+           (doto (JPanel. (GridLayout. 1 0))
+             (.setOpaque true)
+             (.add (JScrollPane.
+                     (doto table
+                       (.setModel (model rows
+                                             (vec (map str (keys (first rows))))
+                                             (fn [r c] ((nth rows r) (nth (keys (first rows)) c)))))
+                       (.setPreferredScrollableViewportSize
+                         (Dimension. 800 300))
+                       (.setFillsViewportHeight true))))))
+         (.setSize 1000 300)
+         (.setLocationRelativeTo nil)
+         (.setVisible true)))))
+
+;; table instance for editing
+(def edit-admin-table (JTable.))

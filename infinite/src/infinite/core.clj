@@ -13,6 +13,9 @@
 ;; main frame
 (def login-frame)
 
+;; username
+(def username (atom ""))
+
 ;; labels
 (def username-label (new JLabel "Username"))
 (def password-label (new JLabel "Password"))
@@ -26,6 +29,13 @@
 (def cancel-button (doto (new JButton "Cancel")(.setPreferredSize (new Dimension 70 20))))
 (def exit-button (doto (new JButton "Exit")(.setPreferredSize (new Dimension 70 20))))
 
+(defn clear-login-fields
+  "Function clears login text fields"
+  []
+
+  (.setText username-field "")                              ; clear username field
+  (.setText password-field ""))                             ; clear password field
+
 ;; login button action
 (. login-button addActionListener
    (proxy [ActionListener] []
@@ -33,23 +43,31 @@
        (log/info "Login Button Pressed")
        ; get username and password entered by user
        (let [username (.getText username-field)
+             ;user-name (reset! username (.getText username-field))
              password (.getText password-field)]
          ; check if the user enters all fields
          (if (or (empty? username)(empty? password))
-           (JOptionPane/showMessageDialog
-             nil "Please enter all details!" "Enter all Fields"
-             JOptionPane/INFORMATION_MESSAGE)
+           (do
+             (clear-login-fields)
+             (JOptionPane/showMessageDialog
+               nil "Please enter all details!" "Enter all Fields"
+               JOptionPane/INFORMATION_MESSAGE))
            (do
              ; check if the credentials are correct
              (if (= (db/login username password ) 1)
                (do
+                 ; log operation to db
+                 (if (= (db/insert-login-logs username) (list 1))
+                   (log/infof "successfully logged in %s to database" username)
+                   (log/errorf "failed to log in %s to database" username))
                  ; close current jframe
                  (.dispose login-frame)
                  ; open main frame
                  (main/exec-main-frame)
-                 (log/info "success")
+                 (log/infof "successfully logged in %s" username)
                  )
                (do (log/info "credentials incorrect!!")
+                   (clear-login-fields)
                    (JOptionPane/showMessageDialog
                      nil "Incorrect Credentials!" "Login usuccessful"
                      JOptionPane/ERROR_MESSAGE)))))))))
@@ -58,8 +76,7 @@
 (. cancel-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
-       (.setText username-field "")                         ; clear username field
-       (.setText password-field "")                         ; clear password field
+       (clear-login-fields)
        (log/info "Cancel Button Pressed"))))
 
 ;; exit button action

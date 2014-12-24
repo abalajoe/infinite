@@ -1,9 +1,11 @@
 
 (ns infinite.main
-  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem)
+  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable)
            (java.awt.event ActionListener))
   (:require [clojure.tools.logging :as log]
-            [layout.admin :as admin]))
+            [layout.admin :as admin]
+            [util.utils :as utl]
+            [model.db :as db]))
 
 ;; main frame
 (def main-frame)
@@ -40,7 +42,8 @@
                           (proxy [ActionListener] []
                             (actionPerformed [e]
                               (println "Edit Admin")
-                              (admin/edit-admin-table)
+                              ; display table to edit admin
+                              (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               )))))))
             (.add
               (doto
@@ -121,7 +124,8 @@
                   (proxy [ActionListener] []
                     (actionPerformed [e]
                       (log/info "Show Admin")
-                      (admin/display-admin-table)
+                      ; display admin table
+                      (utl/display-table (db/list-admin) "Display admin" (JTable.))
                       )))))
         (.add (doto (JMenuItem. "Inventory")
                 (.addActionListener
@@ -138,6 +142,24 @@
                       (log/info "Show Sales")
                       ; (tbl/model)
                       ;(tbl/admin-table)
+                      )))))))
+    (.add
+      (doto (JMenu. "Audit Trails")
+        (.add (doto (JMenuItem. "Login logs")
+                (.addActionListener
+                  (proxy [ActionListener] []
+                    (actionPerformed [e]
+                      (log/info "Show Login Logs")
+                      ; display login logs table
+                      (utl/display-table (db/list-login-logs) "Login logs" (JTable.))
+                      )))))
+        (.add (doto (JMenuItem. "Audit logs")
+                (.addActionListener
+                  (proxy [ActionListener] []
+                    (actionPerformed [e]
+                      (log/info "Show Audit Logs")
+                      ; display audit logs table
+                      (utl/display-table (db/list-audit-logs) "Audit logs" (JTable.))
                       )))))))
     (.add
       (doto (JMenu. "Help")

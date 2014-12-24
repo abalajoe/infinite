@@ -338,3 +338,119 @@
 [2014-12-24 00:12:03,147][INFO][layout.admin] [jose]Successfully update 
 [2014-12-24 00:12:14,867][INFO][infinite.main] Show Admin
 [2014-12-24 00:12:14,877][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 18:48:18,423][INFO][infinite.core] Login Button Pressed
+[2014-12-24 18:48:18,468][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 18:48:18,520][INFO][infinite.core] successfully logged in admin
+[2014-12-24 18:48:23,123][INFO][infinite.main] Show Admin
+[2014-12-24 18:48:23,162][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 18:48:31,328][INFO][infinite.main] Show Inventory
+[2014-12-24 18:48:31,343][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 18:49:44,075][INFO][infinite.core] Login Button Pressed
+[2014-12-24 18:49:44,177][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 18:49:44,211][INFO][infinite.core] successfully logged in admin
+[2014-12-24 18:49:46,044][INFO][infinite.main] Show Admin
+[2014-12-24 18:49:46,058][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44})
+[2014-12-24 18:49:59,317][INFO][infinite.main] Show Inventory
+[2014-12-24 18:49:59,332][INFO][model.db] ({:id 1, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:42:51} {:id 2, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:48:11} {:id 3, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:49:39})
+[2014-12-24 18:59:54,187][INFO][infinite.core] Login Button Pressed
+[2014-12-24 18:59:54,306][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 18:59:54,338][INFO][infinite.core] successfully logged in admin
+[2014-12-24 18:59:56,290][INFO][infinite.main] Show Admin
+[2014-12-24 18:59:56,304][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54})
+[2014-12-24 19:00:32,435][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:00:32,536][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:00:32,567][INFO][infinite.core] successfully logged in admin
+[2014-12-24 19:00:34,532][INFO][infinite.main] Show Admin
+[2014-12-24 19:00:34,544][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54} {:id 7, :username admin, :login_time 2014-12-24 19:00:32})
+[2014-12-24 19:03:10,145][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:03:10,220][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:03:10,258][INFO][infinite.core] successfully logged in admin
+[2014-12-24 19:03:12,436][INFO][infinite.main] Show Admin
+[2014-12-24 19:03:12,518][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:03:16,817][INFO][infinite.main] Show Inventory
+[2014-12-24 19:03:16,831][INFO][model.db] ({:id 1, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:42:51} {:id 2, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:48:11} {:id 3, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:49:39})
+[2014-12-24 19:03:20,460][INFO][infinite.main] Show Admin
+[2014-12-24 19:03:20,473][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54} {:id 7, :username admin, :login_time 2014-12-24 19:00:32} {:id 8, :username admin, :login_time 2014-12-24 19:03:10})
+[2014-12-24 19:07:30,187][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:07:30,295][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:07:30,342][INFO][infinite.core] successfully logged in admin
+[2014-12-24 19:07:34,434][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:09,100][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:08:09,213][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:08:09,263][INFO][infinite.core] successfully logged in admin
+[2014-12-24 19:08:12,198][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:17,472][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:17,487][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:17,501][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:17,514][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:23,261][INFO][layout.admin] Updating admin: [jose][4]
+[2014-12-24 19:08:26,615][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:26,628][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:26,642][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:26,656][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:32,455][INFO][layout.admin] Updating admin: [jose][4]
+[2014-12-24 19:08:34,434][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:34,448][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:34,462][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:34,475][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password josee, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:08:39,661][INFO][layout.admin] Updating admin: [jose][4]
+[2014-12-24 19:08:41,004][INFO][model.db] [delete-admin] function exec
+[2014-12-24 19:08:41,182][INFO][layout.admin] [jose]Successfully update 
+[2014-12-24 19:08:47,086][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:11:23,688][INFO][infinite.core] Cancel Button Pressed
+[2014-12-24 19:11:27,948][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:11:28,279][INFO][infinite.core] credentials incorrect!!
+[2014-12-24 19:12:21,392][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:12:21,422][INFO][infinite.core] credentials incorrect!!
+[2014-12-24 19:12:30,428][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:15:52,923][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:15:58,893][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:15:58,916][INFO][infinite.core] credentials incorrect!!
+[2014-12-24 19:16:05,736][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:16:05,855][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:16:05,910][INFO][infinite.core] successfully logged in admin
+[2014-12-24 19:16:08,748][INFO][infinite.main] Show Login Logs
+[2014-12-24 19:16:08,773][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54} {:id 7, :username admin, :login_time 2014-12-24 19:00:32} {:id 8, :username admin, :login_time 2014-12-24 19:03:10} {:id 9, :username admin, :login_time 2014-12-24 19:07:30} {:id 10, :username admin, :login_time 2014-12-24 19:08:09} {:id 11, :username admin, :login_time 2014-12-24 19:16:05})
+[2014-12-24 19:16:14,050][INFO][infinite.main] Show Audit Logs
+[2014-12-24 19:16:14,082][INFO][model.db] ({:id 1, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:42:51} {:id 2, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:48:11} {:id 3, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:49:39})
+[2014-12-24 19:16:19,352][INFO][infinite.main] Show Admin
+[2014-12-24 19:16:19,381][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:16:25,167][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:16:26,284][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:16:26,308][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:16:26,317][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:16:26,326][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 19:50:22,846][INFO][infinite.core] Login Button Pressed
+[2014-12-24 19:50:22,909][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 19:50:22,928][INFO][infinite.core] successfully logged in admin
+[2014-12-24 20:02:46,709][INFO][infinite.core] Login Button Pressed
+[2014-12-24 20:02:46,767][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 20:02:46,801][INFO][infinite.core] successfully logged in admin
+[2014-12-24 20:02:55,362][INFO][infinite.main] Show Admin
+[2014-12-24 20:02:55,371][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:35,165][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:36,647][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:36,663][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:36,677][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:36,690][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:48,802][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:48,823][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:48,836][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:48,847][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:50,539][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:50,557][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:50,577][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:50,592][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:51,282][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:51,298][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:51,312][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:03:51,321][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-24 20:04:03,267][INFO][infinite.main] Show Login Logs
+[2014-12-24 20:04:03,279][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54} {:id 7, :username admin, :login_time 2014-12-24 19:00:32} {:id 8, :username admin, :login_time 2014-12-24 19:03:10} {:id 9, :username admin, :login_time 2014-12-24 19:07:30} {:id 10, :username admin, :login_time 2014-12-24 19:08:09} {:id 11, :username admin, :login_time 2014-12-24 19:16:05} {:id 12, :username admin, :login_time 2014-12-24 19:50:22} {:id 13, :username admin, :login_time 2014-12-24 20:02:46})
+[2014-12-24 20:04:14,845][INFO][infinite.main] Show Audit Logs
+[2014-12-24 20:04:14,861][INFO][model.db] ({:id 1, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:42:51} {:id 2, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:48:11} {:id 3, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:49:39})
+[2014-12-24 20:04:27,387][INFO][infinite.main] Liquor analysis
+[2014-12-24 20:04:44,637][INFO][infinite.main] Brand analysis
+[2014-12-24 20:11:48,963][INFO][infinite.core] Login Button Pressed
+[2014-12-24 20:11:49,078][INFO][infinite.core] successfully logged in admin to database
+[2014-12-24 20:11:49,128][INFO][infinite.core] successfully logged in admin

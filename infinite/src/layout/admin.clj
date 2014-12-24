@@ -6,7 +6,8 @@
            (java.awt GridBagLayout Insets GridLayout Dimension))
   (:require [clojure.tools.logging :as log]
             [model.db :as db]
-            [util.utils :as utl]))
+            [util.utils :as utl]
+            ))
 
 ;; admin frame
 (def admin-frame)
@@ -251,55 +252,6 @@
                                  password (:password(nth (db/list-admin)row-count))]
                              (dialog-string nil (str id) username password))
                            (flush))))))
-
-(defn edit-admin-table []
-  "This table shows all the administrators
-  for the system and allows editing of data"
-  (def rows (db/list-admin))
-  (. SwingUtilities invokeLater
-     (fn []
-       (doto (JFrame. "Edit Admin")
-         (.setDefaultCloseOperation (. JFrame HIDE_ON_CLOSE))
-         (.setContentPane
-           (doto (JPanel. (GridLayout. 1 0))
-             (.setOpaque true)
-             (.add (JScrollPane.
-                     (doto utl/edit-admin-table
-                       (.setModel (utl/model rows
-                                         (vec (map str (keys (first rows))))
-                                         (fn [r c] ((nth rows r) (nth (keys (first rows)) c)))))
-                       (.setPreferredScrollableViewportSize
-                         (Dimension. 800 300))
-                       (.setFillsViewportHeight true))))))
-         (.setSize 1000 300)
-         (.setLocationRelativeTo nil)
-         (.setVisible true)))))
-
-(defn display-admin-table []
-  "This table shows all the administrators
-  for the system and does not allow editing"
-  (def rows (db/list-admin))
-  (. SwingUtilities invokeLater
-     (fn []
-       (doto (JFrame. "Display Admin")
-         (.setDefaultCloseOperation (. JFrame HIDE_ON_CLOSE))
-         (.setContentPane
-           (doto (JPanel. (GridLayout. 1 0))
-             (.setOpaque true)
-             (.add (JScrollPane.
-                     (doto utl/show-admin-table
-                       (.setModel (utl/model rows
-                                             (vec (map str (keys (first rows))))
-                                             (fn [r c] ((nth rows r) (nth (keys (first rows)) c)))))
-                       (.setPreferredScrollableViewportSize
-                         (Dimension. 800 300))
-                       (.setFillsViewportHeight true))))))
-         (.setSize 1000 300)
-         (.setLocationRelativeTo nil)
-         (.setVisible true)))))
-
-;(admin-table)
-
 ;; admin frame
 (defn exec-admin-frame
   "Function exposes admin frame"
