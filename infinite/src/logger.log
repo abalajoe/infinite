@@ -454,3 +454,70 @@
 [2014-12-24 20:11:48,963][INFO][infinite.core] Login Button Pressed
 [2014-12-24 20:11:49,078][INFO][infinite.core] successfully logged in admin to database
 [2014-12-24 20:11:49,128][INFO][infinite.core] successfully logged in admin
+[2014-12-26 00:18:14,618][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:19:04,323][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:19:15,027][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:19:20,787][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:19:50,141][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:19:58,457][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:21:33,660][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:21:34,057][INFO][infinite.core] credentials incorrect!!
+[2014-12-26 00:21:54,223][INFO][infinite.core] Cancel Button Pressed
+[2014-12-26 00:23:01,680][INFO][infinite.core] Exit Button Pressed
+[2014-12-26 00:23:48,234][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:23:48,693][INFO][infinite.core] successfully logged in admin to database
+[2014-12-26 00:23:48,733][INFO][infinite.core] successfully logged in admin
+[2014-12-26 00:26:44,404][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:26:44,445][INFO][infinite.core] credentials incorrect!!
+[2014-12-26 00:27:38,141][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:27:38,168][INFO][infinite.core] credentials incorrect!!
+[2014-12-26 00:30:56,027][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:30:56,051][INFO][infinite.core] credentials incorrect!!
+[2014-12-26 00:33:27,250][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:33:27,321][INFO][infinite.core] successfully logged in admin to database
+[2014-12-26 00:33:27,339][INFO][infinite.core] successfully logged in admin
+[2014-12-26 00:34:00,934][INFO][infinite.core] Login Button Pressed
+[2014-12-26 00:34:00,956][INFO][infinite.core] successfully logged in jose to database
+[2014-12-26 00:34:00,989][INFO][infinite.core] successfully logged in jose
+[2014-12-26 00:34:34,783][INFO][layout.admin] Add admin Button Pressed
+[2014-12-26 00:34:41,074][INFO][layout.admin] Cancel Button Pressed
+[2014-12-26 00:34:54,248][INFO][layout.admin] Add admin Button Pressed
+[2014-12-26 00:34:54,249][INFO][layout.admin] password mismatch!!
+[2014-12-26 00:35:00,723][INFO][layout.admin] Add admin Button Pressed
+[2014-12-26 00:35:00,751][ERROR][model.db] insert admin SQLE >>  Duplicate entry 'jose' for key 'username'
+[2014-12-26 00:35:00,751][INFO][layout.admin] Insert Admin Database Error!!
+[2014-12-26 00:35:09,359][INFO][infinite.main] Show Admin
+[2014-12-26 00:35:09,374][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:32:53,604][INFO][infinite.core] Login Button Pressed
+[2014-12-27 16:33:45,372][INFO][infinite.core] Login Button Pressed
+[2014-12-27 16:33:45,768][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 16:33:45,829][INFO][infinite.core] successfully logged in admin
+[2014-12-27 16:33:51,438][INFO][infinite.main] Show Admin
+[2014-12-27 16:33:51,537][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:34:48,675][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:34:51,634][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:34:51,672][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:34:51,685][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:34:51,699][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2014-12-27 16:36:58,091][INFO][infinite.main] Show Login Logs
+[2014-12-27 16:36:58,113][INFO][model.db] ({:id 1, :username joe, :login_time 2014-12-24 18:42:44} {:id 2, :username joe, :login_time 2014-12-24 18:48:11} {:id 3, :username admin, :login_time 2014-12-24 18:48:18} {:id 4, :username joe, :login_time 2014-12-24 18:49:39} {:id 5, :username admin, :login_time 2014-12-24 18:49:44} {:id 6, :username admin, :login_time 2014-12-24 18:59:54} {:id 7, :username admin, :login_time 2014-12-24 19:00:32} {:id 8, :username admin, :login_time 2014-12-24 19:03:10} {:id 9, :username admin, :login_time 2014-12-24 19:07:30} {:id 10, :username admin, :login_time 2014-12-24 19:08:09} {:id 11, :username admin, :login_time 2014-12-24 19:16:05} {:id 12, :username admin, :login_time 2014-12-24 19:50:22} {:id 13, :username admin, :login_time 2014-12-24 20:02:46} {:id 14, :username admin, :login_time 2014-12-24 20:11:49} {:id 15, :username admin, :login_time 2014-12-26 00:23:48} {:id 16, :username admin, :login_time 2014-12-26 00:33:27} {:id 17, :username jose, :login_time 2014-12-26 00:34:00} {:id 18, :username admin, :login_time 2014-12-27 16:33:45})
+[2014-12-27 16:37:38,769][INFO][infinite.main] Show Audit Logs
+[2014-12-27 16:37:38,890][INFO][model.db] ({:id 1, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:42:51} {:id 2, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:48:11} {:id 3, :username joe, :action add admin, :description successfull, :operation_time 2014-12-24 18:49:39})
+[2014-12-27 16:45:06,555][INFO][infinite.core] Login Button Pressed
+[2014-12-27 16:45:06,658][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 16:45:06,702][INFO][infinite.core] successfully logged in admin
+[2014-12-27 16:50:54,242][INFO][infinite.core] Login Button Pressed
+[2014-12-27 16:50:54,278][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 16:50:54,326][INFO][infinite.core] successfully logged in admin
+[2014-12-27 16:59:02,824][INFO][infinite.core] Login Button Pressed
+[2014-12-27 16:59:02,861][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 16:59:02,920][INFO][infinite.core] successfully logged in admin
+[2014-12-27 17:02:25,583][INFO][infinite.core] Login Button Pressed
+[2014-12-27 17:02:25,620][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 17:02:25,656][INFO][infinite.core] successfully logged in admin
+[2014-12-27 17:07:20,409][INFO][infinite.core] Login Button Pressed
+[2014-12-27 17:07:20,450][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 17:07:20,486][INFO][infinite.core] successfully logged in admin
+[2014-12-27 17:11:11,397][INFO][infinite.core] Login Button Pressed
+[2014-12-27 17:11:11,658][INFO][infinite.core] successfully logged in admin to database
+[2014-12-27 17:11:11,705][INFO][infinite.core] successfully logged in admin

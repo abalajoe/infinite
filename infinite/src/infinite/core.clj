@@ -32,7 +32,6 @@
 (defn clear-login-fields
   "Function clears login text fields"
   []
-
   (.setText username-field "")                              ; clear username field
   (.setText password-field ""))                             ; clear password field
 
