@@ -1,14 +1,33 @@
 
 (ns infinite.main
-  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable)
-           (java.awt.event ActionListener KeyEvent))
+  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable BorderFactory JPanel)
+           (java.awt.event ActionListener KeyEvent)
+           (org.jfree.chart ChartPanel))
   (:require [clojure.tools.logging :as log]
             [layout.admin :as admin]
             [util.utils :as utl]
-            [model.db :as db]))
+            [model.db :as db])
+  (:use [incanter core charts pdf stats io datasets]))
 
 ;; main frame
 (def main-frame)
+
+;; days of the week
+(def days ["Mon" "Tue" "Wed" "Thur" "Fri" "Sat" "Sun"])
+
+;; total sales
+(def sale [10 20 30 40 50 60 70])
+(def vodka [11 21 31 41 51 61 71])
+(def whisky [13 23 33 43 53 63 73])
+(def gin [15 25 35 45 55 65 75])
+(def brandy [17 27 37 47 57 67 77])
+(def beer [19 29 39 49 59 69 79])
+(def beverage [20 30 40 50 60 70 80])
+
+(def plot (line-chart days
+                      vodka
+                      :legend true
+                      :series-label "Vodka"))
 
 ;; menubar
 (def menuBar
@@ -216,6 +235,26 @@
             (.setToolTipText "About")
             (.setMnemonic KeyEvent/VK_A)))))))
 
+;; Line Chart Panel
+(def line-chart-panel
+  ; use gridbaglayout as layout engine
+  (doto (JPanel.)
+    ; set title for panel
+    (.setBorder(BorderFactory/createTitledBorder "Line Chart"))
+    ; style the components
+    #_(.add (ChartPanel. (line-chart days
+                                  sale
+                                  :legend true
+                                  :series-label "Drink")))
+    (.add (ChartPanel.(add-categories plot days whisky :series-label "Whisky")))
+    (.add (ChartPanel.(add-categories plot days brandy :series-label "Brandy")))
+    (.add (ChartPanel.(add-categories plot days gin :series-label "Gin")))
+    (.add (ChartPanel.(add-categories plot days beer :series-label "Beer")))
+    (.add (ChartPanel.(add-categories plot days beverage :series-label "Beverage")))
+    ))
+
+
+
 ;; call frame
 (defn exec-main-frame []
   (println "call frame triggered....")
@@ -223,10 +262,11 @@
   (def main-frame
     (doto
       (new JFrame "Infinite")
+      (.setContentPane line-chart-panel)
       (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
       (.setJMenuBar menuBar)
       (.setVisible true)
-      (.setSize 1000 400)
+      (.setSize 950 550)
       (.setLocationRelativeTo nil))))
 
 ;(exec-main-frame)

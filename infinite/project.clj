@@ -9,4 +9,5 @@
                  [org.clojure/tools.logging "0.2.6"]        ;; loggging
                  [log4j "1.2.17"]                           ;; logging
                  [jfree/jfreechart "1.0.13"]                ;; data visualization
-                 [jfree/jcommon "1.0.15"]])                 ;; data visualization
+                 [jfree/jcommon "1.0.15"]                   ;; data visualization
+                 [incanter "1.5.2"]])                       ;; data visualization
