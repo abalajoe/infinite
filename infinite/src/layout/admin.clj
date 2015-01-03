@@ -27,6 +27,13 @@
 (def cancel-button (doto (new JButton "Cancel")(.setPreferredSize (new Dimension 70 20))))
 (def exit-button (doto (new JButton "Exit")(.setPreferredSize (new Dimension 70 20))))
 
+(defn clear-add-admin-fields
+  "Function clears add-admin text fields"
+  []
+  (.setText username-field "")                              ; clear username field
+  (.setText password-field "")                              ; clear password field
+  (.setText confirm-password-field ""))                     ; clear confirm password field
+
 ;; add button action
 (. add-button addActionListener
    (proxy [ActionListener] []
@@ -45,23 +52,29 @@
              ; check if the credentials are correct
              (if (= password confirm-password)
                (do
-                 (if (= (db/insert-admin username password) (list 1))
+                 (if (not (db/admin-exists? username))      ; check if the admin exists
                    (do
-                     (log/infof "successfully added %s" username)
-                     (JOptionPane/showMessageDialog
-                       nil (format "Successfully inserted %s to database" username) "Successful operation"
-                       JOptionPane/INFORMATION_MESSAGE)
-                     (.setText username-field "")
-                     (.setText password-field "")
-                     (.setText confirm-password-field ""))
-                   (do (log/info "Insert Admin Database Error!!")
-                       (JOptionPane/showMessageDialog
-                         nil "Failed inserting admin to database!" "Database error"
-                         JOptionPane/ERROR_MESSAGE))))
+                     (if (= (db/insert-admin username password) (list 1))
+                       (do
+                         (log/infof "successfully added %s" username)
+                         (JOptionPane/showMessageDialog
+                           nil (format "Successfully inserted %s to database" username) "Successful operation"
+                           JOptionPane/INFORMATION_MESSAGE)
+                         (clear-add-admin-fields))              ; clear text fields
+                       (do (log/info "Insert Admin Database Error!!")
+                           (JOptionPane/showMessageDialog
+                             nil "Failed inserting admin to database!" "Database error"
+                             JOptionPane/ERROR_MESSAGE))))
+                   (do (log/info "Admin exists!!")
+                           (JOptionPane/showMessageDialog
+                             nil (format "The Admin %s already exists!" username) "Admin exists"
+                             JOptionPane/ERROR_MESSAGE)
+                           (clear-add-admin-fields))))
                (do (log/info "password mismatch!!")
                    (JOptionPane/showMessageDialog
                      nil "Passwords do not match!" "Password mismatch"
-                     JOptionPane/ERROR_MESSAGE)))))))))
+                     JOptionPane/ERROR_MESSAGE)
+                   (clear-add-admin-fields)))))))))
 
 ;; change password button action
 (. cancel-button addActionListener
@@ -244,9 +257,9 @@
                          (let [coordinates (.getPoint e)
                                row-count (.rowAtPoint utl/edit-admin-table coordinates)
                                column-count (.columnAtPoint utl/edit-admin-table coordinates)]
-                           (prn "click r > " row-count)
-                           (prn "click c > " column-count)
-                           (prn "ID > " (:username(nth (db/list-admin)row-count)))
+                           ;(prn "click r >>> " row-count)
+                           ; (prn "click c >>> " column-count)
+                           ;(prn "ID >>> " (:username(nth (db/list-admin)row-count)))
                            (let [id (:id(nth (db/list-admin)row-count))
                                  username (:username(nth (db/list-admin)row-count))
                                  password (:password(nth (db/list-admin)row-count))]

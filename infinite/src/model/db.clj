@@ -46,7 +46,7 @@
   (try
     (let [sql "delete from tbl_login where id = ?"]
       (sql/with-connection db
-                           (sql/do-prepared sql [id])))
+        (sql/do-prepared sql [id])))
     (catch SQLException e
       (log/errorf "SQLException delete-admin [%s]" e))
     (catch Exception e
@@ -59,7 +59,7 @@
   (try
     (let [sql "update tbl_login set password = ? where id = ?"]
       (sql/with-connection db
-                           (sql/do-prepared sql [password id])))
+        (sql/do-prepared sql [password id])))
     (catch SQLException e
       (log/errorf "SQLException update-admin [%s]" e))
     (catch Exception e
@@ -71,8 +71,17 @@
 (defn list-inventory []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
-                       (sql/with-query-results rows ["select * from tbl_add_inventory"]      ; execute query
-                                               (log/info rows )rows)))
+   (sql/with-query-results rows ["select * from tbl_add_inventory"]      ; execute query
+     (log/info rows )rows)))
+
+(defn admin-exists?
+  [username]
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows [(format "select * from tbl_login where username = '%s'" username)]      ; execute query
+    (doall rows ))))
+
+(if (not (admin-exists? "abala")) 1 0)
 
 (defn liquor-names []
   "Function display system admin"
@@ -101,9 +110,11 @@
 
 (defn list-user []
   (sql/with-connection db
-                       (sql/with-query-results rows ["select * from login where id=1"]
-                                               (println rows )
-                                               (count rows))))
+    (sql/with-query-results rows ["select * from login where id=1"]
+      (println rows )
+       (count rows))))
+
+
 
 (defn insert-admin
   "Function inserts admin to db"

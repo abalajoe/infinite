@@ -572,3 +572,240 @@
 [2014-12-30 20:45:05,637][INFO][infinite.core] Login Button Pressed
 [2014-12-30 20:45:05,674][INFO][infinite.core] successfully logged in admin to database
 [2014-12-30 20:45:05,714][INFO][infinite.core] successfully logged in admin
+[2015-01-02 17:09:49,832][INFO][infinite.core] Login Button Pressed
+[2015-01-02 17:09:50,273][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 17:09:50,312][INFO][infinite.core] successfully logged in admin
+[2015-01-02 17:22:27,049][INFO][infinite.main] Show Admin
+[2015-01-02 17:22:27,099][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34})
+[2015-01-02 17:33:24,213][INFO][infinite.core] Login Button Pressed
+[2015-01-02 17:33:24,265][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 17:33:24,322][INFO][infinite.core] successfully logged in admin
+[2015-01-02 17:40:33,476][INFO][infinite.core] Login Button Pressed
+[2015-01-02 17:40:33,522][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 17:40:33,568][INFO][infinite.core] successfully logged in admin
+[2015-01-02 17:40:41,043][INFO][infinite.main] Exit Application
+[2015-01-02 17:41:38,676][INFO][infinite.core] Login Button Pressed
+[2015-01-02 17:41:38,967][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 17:41:39,006][INFO][infinite.core] successfully logged in admin
+[2015-01-02 17:44:31,840][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 17:44:31,841][INFO][layout.admin] password mismatch!!
+[2015-01-02 17:44:41,582][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 17:44:41,616][INFO][layout.admin] successfully added abala
+[2015-01-02 17:45:05,720][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 17:45:05,750][ERROR][model.db] insert admin SQLE >>  Duplicate entry 'abala' for key 'username'
+[2015-01-02 17:45:05,750][INFO][layout.admin] Insert Admin Database Error!!
+[2015-01-02 17:51:54,553][INFO][model.db] [check-admin] function exec
+[2015-01-02 17:51:54,580][ERROR][model.db] SQLException delete-admin [java.sql.BatchUpdateException: Can not issue executeUpdate() for SELECTs]
+[2015-01-02 17:52:18,009][INFO][model.db] [check-admin] function exec
+[2015-01-02 17:52:18,030][ERROR][model.db] SQLException delete-admin [java.sql.BatchUpdateException: Can not issue executeUpdate() for SELECTs]
+[2015-01-02 17:54:25,476][INFO][model.db] ({:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41})
+[2015-01-02 19:39:17,437][INFO][infinite.core] Login Button Pressed
+[2015-01-02 19:39:17,504][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 19:39:17,555][INFO][infinite.core] successfully logged in admin
+[2015-01-02 19:40:51,063][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:40:51,077][INFO][layout.admin] Admin exists!!
+[2015-01-02 19:41:32,122][INFO][infinite.core] Login Button Pressed
+[2015-01-02 19:41:32,166][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 19:41:32,216][INFO][infinite.core] successfully logged in admin
+[2015-01-02 19:41:41,933][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:41:42,017][INFO][layout.admin] Admin exists!!
+[2015-01-02 19:42:46,133][INFO][infinite.core] Login Button Pressed
+[2015-01-02 19:42:46,183][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 19:42:46,214][INFO][infinite.core] successfully logged in admin
+[2015-01-02 19:42:56,338][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:42:56,351][INFO][layout.admin] Admin exists!!
+[2015-01-02 19:43:19,796][INFO][infinite.core] Login Button Pressed
+[2015-01-02 19:43:19,885][INFO][infinite.core] successfully logged in admin to database
+[2015-01-02 19:43:19,933][INFO][infinite.core] successfully logged in admin
+[2015-01-02 19:43:27,924][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:43:27,937][INFO][layout.admin] Admin exists!!
+[2015-01-02 19:43:36,621][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:43:36,634][INFO][layout.admin] Admin exists!!
+[2015-01-02 19:43:47,694][INFO][layout.admin] Add admin Button Pressed
+[2015-01-02 19:43:47,792][INFO][layout.admin] successfully added kefa
+[2015-01-03 03:07:37,527][INFO][infinite.core] Login Button Pressed
+[2015-01-03 03:07:37,673][INFO][infinite.core] successfully logged in admin to database
+[2015-01-03 03:07:37,688][INFO][infinite.core] successfully logged in admin
+[2015-01-03 03:08:20,875][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:24,766][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:24,780][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:24,792][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:24,805][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:37,453][INFO][layout.admin] Deleting admin: [joe][1]
+[2015-01-03 03:08:39,683][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:39,703][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:39,715][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:39,728][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:43,680][INFO][layout.admin] exit
+[2015-01-03 03:08:43,699][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:43,715][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:43,730][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:43,743][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:44,751][INFO][layout.admin] exit
+[2015-01-03 03:08:44,774][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:44,791][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:44,805][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:44,816][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:45,697][INFO][layout.admin] exit
+[2015-01-03 03:08:45,719][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:45,735][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:45,746][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:45,877][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:08:46,959][INFO][layout.admin] exit
+[2015-01-03 03:09:01,475][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:01,488][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:01,501][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:01,514][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:03,365][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:03,383][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:03,391][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:03,453][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:04,606][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:04,621][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:04,636][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:04,645][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:05,563][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:05,580][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:05,593][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:05,605][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:06,414][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:06,431][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:06,443][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:06,453][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:27,578][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:27,590][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:27,602][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:27,617][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:29,635][INFO][layout.admin] exit
+[2015-01-03 03:09:29,653][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:29,671][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:29,686][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:29,698][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:30,718][INFO][layout.admin] exit
+[2015-01-03 03:09:30,739][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:30,756][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:30,769][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:30,778][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:34,644][INFO][layout.admin] exit
+[2015-01-03 03:09:34,668][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:34,682][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:34,696][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:34,709][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:35,578][INFO][layout.admin] exit
+[2015-01-03 03:09:35,605][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:35,619][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:35,631][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:35,641][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:37,279][INFO][layout.admin] exit
+[2015-01-03 03:09:52,779][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:52,791][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:52,805][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:52,818][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:59,321][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:59,340][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:59,353][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:09:59,364][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:00,844][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:00,862][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:00,873][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:00,884][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:01,839][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:01,859][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:01,871][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:01,883][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:02,598][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:02,618][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:02,630][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:02,639][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:10:11,740][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 4, :username jose, :password joe, :date_added 2014-12-23 22:23:34} {:id 5, :username abala, :password abala, :date_added 2015-01-02 17:44:41} {:id 7, :username kefa, :password kefa, :date_added 2015-01-02 19:43:47})
+[2015-01-03 03:11:49,395][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:50,686][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:50,699][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:50,710][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:50,722][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:51,999][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,006][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,014][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,023][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,778][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,810][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,825][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:52,834][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:53,508][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:53,606][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:53,618][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:53,629][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:54,333][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:54,351][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:54,359][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:11:54,368][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:49,025][INFO][infinite.core] Login Button Pressed
+[2015-01-03 03:15:49,089][INFO][infinite.core] successfully logged in admin to database
+[2015-01-03 03:15:49,120][INFO][infinite.core] successfully logged in admin
+[2015-01-03 03:15:52,837][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:54,285][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:54,297][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:54,308][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:54,320][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:57,622][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:57,636][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:57,714][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:57,726][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:58,397][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:58,412][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:58,425][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:58,434][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,025][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,042][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,055][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,066][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,545][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,564][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,574][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:15:59,583][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:16:00,067][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:16:00,086][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:16:00,094][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:16:00,104][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:37,769][INFO][infinite.core] Login Button Pressed
+[2015-01-03 03:17:37,858][INFO][infinite.core] successfully logged in admin to database
+[2015-01-03 03:17:37,889][INFO][infinite.core] successfully logged in admin
+[2015-01-03 03:17:50,906][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:52,201][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:52,222][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:52,244][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:52,257][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:56,013][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:56,030][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:56,038][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:56,048][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:17:59,384][INFO][layout.admin] exit
+[2015-01-03 03:42:36,515][INFO][infinite.core] Login Button Pressed
+[2015-01-03 03:42:36,651][INFO][infinite.core] successfully logged in admin to database
+[2015-01-03 03:42:36,673][INFO][infinite.core] successfully logged in admin
+[2015-01-03 03:42:39,981][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:41,174][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:41,187][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:41,199][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:41,212][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:44,939][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:44,961][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:42:44,979][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:03,237][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:03,263][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:03,276][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:03,289][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:07,905][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:07,931][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:43:07,941][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:02,164][INFO][infinite.core] Login Button Pressed
+[2015-01-03 03:44:02,260][INFO][infinite.core] successfully logged in admin to database
+[2015-01-03 03:44:02,283][INFO][infinite.core] successfully logged in admin
+[2015-01-03 03:44:08,949][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:10,258][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:10,270][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:10,283][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:10,296][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:12,102][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:12,119][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-03 03:44:12,133][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})

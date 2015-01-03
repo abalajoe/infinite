@@ -34,24 +34,23 @@
   (doto (JMenuBar.)
     (.add
       (doto (JMenu. "File")
-        (.setMnemonic KeyEvent/VK_F)
-        (.setToolTipText "File")
+        (.setMnemonic KeyEvent/VK_F)                        ; set the mnemonic of the menu
+        (.setToolTipText "File")                            ; set tool tip text of the menu
+            (.add                                           ; add menu item
+              (doto
+                (JMenuItem. "Print")                        ; create menu item with lable
+                (.setMnemonic KeyEvent/VK_P)                ; set mnemonic of menu item
+                (.setToolTipText "Print")))                 ; set tool tip text of menu item
             (.add
               (doto
-                (JMenuItem. "Admin")
-                (.setToolTipText "Admin")
-                (.setMnemonic KeyEvent/VK_A)))
-            (.add
-              (doto
-                (JMenuItem. "Inventory")
-                (.setToolTipText "Inventory")
-                (.setMnemonic KeyEvent/VK_I)
-                ))
-            (.add (JMenuItem. "Suppliers"))
-            (.add (JMenuItem. "Expenditure"))
-            (.add (JMenuItem. "Budget"))
-            (.add (JMenuItem. "Graphs"))
-            (.add (JMenuItem. "Reports"))))
+                (JMenuItem. "Exit")
+                (.setToolTipText "Exit")
+                (.setMnemonic KeyEvent/VK_E)
+                (.addActionListener
+                  (proxy [ActionListener] []
+                    (actionPerformed [e]
+                      (log/info "Exit Application")
+                      (System/exit 0))))))))
     (.add
       (doto (JMenu. "Edit")
         (.setToolTipText "Edit")
@@ -203,8 +202,26 @@
                       ;(tbl/admin-table)
                       )))))))
     (.add
-      (doto (JMenu. "Audit Trails")
-        (.setMnemonic KeyEvent/VK_A)
+      (doto (JMenu. "Data Analysis")
+        (.setToolTipText "Data Analysis")
+        (.setMnemonic KeyEvent/VK_D)
+        (.add
+          (doto
+            (JMenuItem. "About")
+            (.setToolTipText "About")
+            (.setMnemonic KeyEvent/VK_A)))))
+    (.add
+      (doto (JMenu. "Reports")
+        (.setToolTipText "Reports")
+        (.setMnemonic KeyEvent/VK_R)
+        (.add
+          (doto
+            (JMenuItem. "About")
+            (.setToolTipText "About")
+            (.setMnemonic KeyEvent/VK_A)))))
+    (.add
+      (doto (JMenu. "Navigate")
+        (.setMnemonic KeyEvent/VK_N)
         (.add (doto (JMenuItem. "Login logs")
                 (.setToolTipText "Login logs")
                 (.setMnemonic KeyEvent/VK_L)
@@ -250,8 +267,7 @@
     (.add (ChartPanel.(add-categories plot days brandy :series-label "Brandy")))
     (.add (ChartPanel.(add-categories plot days gin :series-label "Gin")))
     (.add (ChartPanel.(add-categories plot days beer :series-label "Beer")))
-    (.add (ChartPanel.(add-categories plot days beverage :series-label "Beverage")))
-    ))
+    (.add (ChartPanel.(add-categories plot days beverage :series-label "Beverage")))))
 
 
 
