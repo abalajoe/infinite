@@ -1,10 +1,12 @@
 
 (ns infinite.main
   (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable BorderFactory JPanel)
-           (java.awt.event ActionListener KeyEvent)
+           (java.awt.event ActionListener KeyEvent MouseListener)
            (org.jfree.chart ChartPanel))
   (:require [clojure.tools.logging :as log]
             [layout.admin :as admin]
+            [layout.sales :as sales]
+            [layout.help :as help]
             [util.utils :as utl]
             [model.db :as db])
   (:use [incanter core charts pdf stats io datasets]))
@@ -76,8 +78,11 @@
                             (actionPerformed [e]
                               (println "Edit Admin")
                               ; display table to edit admin
+                              ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               )))))))
+
+
             (.add
               (doto
                 (new JMenu "Inventory")
@@ -96,14 +101,14 @@
                           )))))
                 (.add
                   (doto
-                    (new JMenuItem "Display Inventory")
-                    (.setToolTipText "Display Inventory")
-                    (.setMnemonic KeyEvent/VK_D)
+                    (new JMenuItem "Edit Inventory")
+                    (.setToolTipText "Edit Inventory")
+                    (.setMnemonic KeyEvent/VK_E)
                     (.addActionListener
                       (proxy [ActionListener] []
                         (actionPerformed [e]
-                          (log/info "Display Inventory")
-                          ;(tbl/inventory-table)
+                          (log/info "Edit Inventory")
+                          (utl/display-table (db/list-inventory) "Edit test" utl/test-table)
                           )))))
                 (.add
                   (doto
@@ -142,32 +147,29 @@
                               ; (chart/size-piechart)
                               )))))))))
             (.add
-              (doto
-                (new JMenu "Sales")
-                (.setMnemonic KeyEvent/VK_S)
-                (.add
-                  (doto
-                    (new JMenuItem "Record Sales")
-                    (.setToolTipText "Record Sales")
-                    (.setMnemonic KeyEvent/VK_R)
-                    (.addActionListener
-                      (proxy [ActionListener] []
-                        (actionPerformed [e]
-                          (log/info "Sales")
-                          ; (pnl/sales-frame)
-                          )))
-                    (.addActionListener
-                      (proxy [ActionListener] []
-                        (actionPerformed [e]
-                          (log/info "Sales")
-                          ;(pnl/sales-frame)
-                          )))))
-                (.add
-                  (doto
-                    (new JMenuItem "Display Sales")
-                    (.setToolTipText "Display Sales")
-                    (.setMnemonic KeyEvent/VK_D)
-                    ))))))
+              (doto (JMenu. "Sales")
+                (.setToolTipText "Sales")
+                (.setMnemonic KeyEvent/VK_A)
+                (.add (doto (JMenuItem. "Add Sales")
+                        (.setToolTipText "Add Sales")
+                        (.setMnemonic KeyEvent/VK_A)
+                        (.addActionListener
+                          (proxy [ActionListener] []
+                            (actionPerformed [e]
+                              (println "Add Sales")
+                              (sales/exec-sales-frame)
+                              )))))
+                (.add (doto (JMenuItem. "Edit Sales")
+                        (.setToolTipText "Edit Sales")
+                        (.setMnemonic KeyEvent/VK_E)
+                        (.addActionListener
+                          (proxy [ActionListener] []
+                            (actionPerformed [e]
+                              (println "Edit Admin")
+                              ; display table to edit admin
+                              ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
+                              (utl/display-table (db/list-sales) "Edit Sales" utl/edit-sales-table)
+                              )))))))))
     (.add
       (doto (JMenu. "View")
         (.setMnemonic KeyEvent/VK_V)
@@ -189,7 +191,7 @@
                     (actionPerformed [e]
                       (log/info "Show Inventory")
                       ; (tbl/model)
-                      ;(tbl/admin-table)
+                      (utl/display-table (db/list-inventory) "Display Inventory" (JTable.))
                       )))))
         (.add (doto (JMenuItem. "Sales")
                 (.setToolTipText "Sales")
@@ -199,7 +201,7 @@
                     (actionPerformed [e]
                       (log/info "Show Sales")
                       ; (tbl/model)
-                      ;(tbl/admin-table)
+                      (utl/display-table (db/list-sales) "Display admin" (JTable.))
                       )))))))
     (.add
       (doto (JMenu. "Data Analysis")
@@ -250,7 +252,12 @@
           (doto
             (JMenuItem. "About")
             (.setToolTipText "About")
-            (.setMnemonic KeyEvent/VK_A)))))))
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (help/dialog-string nil)
+                  )))))))))
 
 ;; Line Chart Panel
 (def line-chart-panel
@@ -263,7 +270,7 @@
                                   sale
                                   :legend true
                                   :series-label "Drink")))
-    (.add (ChartPanel.(add-categories plot days whisky :series-label "Whisky")))
+    (.add (ChartPanel.(add-categories plot days (db/get-henessy) :series-label "Whisky")))
     (.add (ChartPanel.(add-categories plot days brandy :series-label "Brandy")))
     (.add (ChartPanel.(add-categories plot days gin :series-label "Gin")))
     (.add (ChartPanel.(add-categories plot days beer :series-label "Beer")))

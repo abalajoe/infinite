@@ -3,7 +3,8 @@
 (ns util.utils
   (:import (javax.swing JOptionPane JTable SwingUtilities JFrame JPanel JScrollPane)
            (javax.swing.table AbstractTableModel)
-           (java.awt GridLayout Dimension))
+           (java.awt GridLayout Dimension)
+           (java.awt.event MouseAdapter))
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str])
   (:require [clojure.tools.logging :as log]))
@@ -75,9 +76,23 @@
     (getValueAt [r c]  (value-at r c))
     (isCellEditable [r c] false)))
 
+(defn double-click? [event]
+  (= 2 (.getClickCount event)))
+
+(defn add-mouse-listener
+  [component]
+  (let [listener (proxy [MouseAdapter] []
+                   (mouseClicked [event]
+                     (and (double-click? event) (SwingUtilities/isLeftMouseButton event)
+                          (println "working..."))))]
+    (.addMouseListener component listener)
+    listener))
+
+
 (defn display-table [data title table]
   "This table shows all the administrators
   for the system and does not allow editing"
+  (println "display table")
   (def rows data)
   (. SwingUtilities invokeLater
      (fn []
@@ -93,10 +108,15 @@
                                              (fn [r c] ((nth rows r) (nth (keys (first rows)) c)))))
                        (.setPreferredScrollableViewportSize
                          (Dimension. 800 300))
-                       (.setFillsViewportHeight true))))))
+                       (.setFillsViewportHeight true)
+                       )))))
          (.setSize 1000 300)
          (.setLocationRelativeTo nil)
          (.setVisible true)))))
 
 ;; table instance for editing
+
 (def edit-admin-table (JTable.))
+(def test-table (doto (JTable.)))
+(def edit-inventory-table (JTable.))
+(def edit-sales-table (JTable.))

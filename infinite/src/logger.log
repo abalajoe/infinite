@@ -809,3 +809,377 @@
 [2015-01-03 03:44:12,102][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
 [2015-01-03 03:44:12,119][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
 [2015-01-03 03:44:12,133][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:24,305][INFO][infinite.core] Login Button Pressed
+[2015-01-06 08:13:24,378][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 08:13:24,414][INFO][infinite.core] successfully logged in admin
+[2015-01-06 08:13:29,063][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:30,462][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:30,480][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:30,493][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:34,076][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:34,091][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:34,102][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:35,749][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:35,761][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:35,775][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:37,533][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:37,539][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:37,545][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:39,424][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:39,436][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:39,445][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:42,097][INFO][layout.admin] exit
+[2015-01-06 08:13:43,517][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:43,529][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:43,541][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:13:44,727][INFO][layout.admin] exit
+[2015-01-06 08:14:35,029][INFO][infinite.core] Login Button Pressed
+[2015-01-06 08:14:35,062][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 08:14:35,111][INFO][infinite.core] successfully logged in admin
+[2015-01-06 08:14:39,109][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:14:40,297][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:14:40,311][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:14:40,322][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:15:01,664][INFO][layout.admin] Add admin Button Pressed
+[2015-01-06 08:15:01,677][INFO][layout.admin] Admin exists!!
+[2015-01-06 08:15:10,963][INFO][layout.admin] Add admin Button Pressed
+[2015-01-06 08:15:10,992][INFO][layout.admin] successfully added abala
+[2015-01-06 08:15:14,933][INFO][layout.admin] Cancel Button Pressed
+[2015-01-06 08:15:18,869][INFO][layout.admin] Exit Button Pressed
+[2015-01-06 08:15:25,592][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:27,509][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:27,521][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:27,530][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:30,468][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:30,481][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:30,489][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:32,976][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:32,989][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:32,997][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:35,736][INFO][layout.admin] exit
+[2015-01-06 08:15:37,260][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:37,273][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:37,282][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:54,304][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:55,559][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:55,572][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:15:55,580][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abala, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:04,524][INFO][layout.admin] Updating admin: [abala][2]
+[2015-01-06 08:16:06,086][INFO][model.db] [delete-admin] function exec
+[2015-01-06 08:16:06,110][INFO][layout.admin] [abala]Successfully update 
+[2015-01-06 08:16:13,997][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:21,195][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:22,652][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:22,664][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:22,676][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:24,041][INFO][layout.admin] Deleting admin: [abala][2]
+[2015-01-06 08:16:39,684][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:41,218][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:41,230][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:41,237][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27} {:id 2, :username abala, :password abalaa, :date_added 2015-01-06 08:15:10})
+[2015-01-06 08:16:43,636][INFO][layout.admin] Deleting admin: [abala][2]
+[2015-01-06 08:16:44,509][INFO][model.db] [delete-admin] function exec
+[2015-01-06 08:16:44,534][INFO][layout.admin] [abala]Successfully deleted 
+[2015-01-06 08:16:49,673][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 08:17:00,870][INFO][infinite.main] Display Inventory
+[2015-01-06 08:17:06,835][INFO][infinite.main] Add Inventory
+[2015-01-06 08:51:23,700][INFO][layout.inventory] Inventory Save Button Pressed
+[2015-01-06 08:51:34,176][INFO][layout.inventory] Inventory Save Button Pressed
+[2015-01-06 08:51:39,759][INFO][layout.inventory] Inventory Save Button Pressed
+[2015-01-06 08:51:41,787][INFO][layout.inventory] Cancelling addition of inentory:> [VAT 69][gin][1 litre][20][3]
+[2015-01-06 08:51:48,648][INFO][layout.inventory] Inventory Save Button Pressed
+[2015-01-06 08:51:49,537][INFO][layout.inventory] New inventory added:> [VAT 69][gin][1 litre][20][2]
+[2015-01-06 08:52:12,585][INFO][layout.inventory] Inventory Save Button Pressed
+[2015-01-06 08:52:13,561][INFO][layout.inventory] New inventory added:> [captain morgan][whisky][250ml][100][10]
+[2015-01-06 08:54:00,246][INFO][layout.inventory] Cancel Button Pressed
+[2015-01-06 08:54:06,220][INFO][layout.inventory] Exit Button Pressed
+[2015-01-06 09:05:23,987][INFO][model.db] ({:id 1, :username joe, :password jwizzy, :date_added 2014-12-23 22:16:27})
+[2015-01-06 09:06:52,697][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:06:52,729][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:06:52,769][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:06:55,179][INFO][infinite.main] Show Inventory
+[2015-01-06 09:07:06,227][INFO][infinite.main] Show Sales
+[2015-01-06 09:13:49,058][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:13:49,086][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:13:49,118][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:13:52,441][INFO][infinite.main] Show Inventory
+[2015-01-06 09:14:09,877][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:15:29,251][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:15:29,311][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:15:29,367][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:15:33,217][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:21:51,285][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:21:51,317][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:21:51,358][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:21:57,339][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:22:54,283][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:22:54,315][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:22:54,340][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:22:57,277][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:23:33,755][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:23:33,773][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:23:33,814][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:23:40,026][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:29:42,174][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:29:42,211][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:29:42,238][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:30:14,055][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:36:00,100][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:36:00,131][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:36:00,152][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:40:30,188][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:40:30,223][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:40:30,256][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:41:27,238][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:46:42,410][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:46:42,446][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:46:42,489][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:46:45,624][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:47:24,496][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:47:24,540][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:47:24,567][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:47:27,347][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:50:01,474][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:50:01,545][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:50:01,588][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:50:04,944][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:52:22,189][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:52:22,284][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:52:22,316][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:52:25,326][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:53:29,911][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:53:29,937][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:53:29,967][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:53:42,487][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:56:02,180][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:56:02,214][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:56:02,251][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:56:05,794][INFO][infinite.main] Edit Inventory
+[2015-01-06 09:57:24,827][INFO][infinite.core] Login Button Pressed
+[2015-01-06 09:57:24,858][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 09:57:24,888][INFO][infinite.core] successfully logged in admin
+[2015-01-06 09:57:30,509][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:01:07,836][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:02:11,370][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:02:11,403][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:02:11,429][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:02:15,916][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:14:08,790][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:14:08,827][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:14:08,854][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:14:25,175][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:15:55,189][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:15:55,225][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:15:55,252][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:16:05,475][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:22:33,376][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:22:33,412][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:22:33,442][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:24:01,727][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:24:01,771][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:24:01,811][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:24:13,174][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:26:28,942][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:26:28,984][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:26:29,010][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:26:31,799][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:27:55,753][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:27:55,786][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:27:55,820][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:27:58,886][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:28:50,778][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:28:50,818][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:28:50,865][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:28:54,079][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:29:28,687][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:29:28,719][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:29:28,755][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:29:31,287][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:30:11,333][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:30:11,364][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:30:11,406][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:30:21,168][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:31:29,961][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:31:29,996][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:31:30,022][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:31:33,100][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:32:10,065][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:32:10,112][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:32:10,146][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:32:12,905][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:32:57,059][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:32:57,088][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:32:57,113][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:32:59,846][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:33:41,338][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:33:41,429][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:33:41,473][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:33:44,409][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:34:27,735][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:34:27,768][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:34:27,801][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:34:31,303][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:35:56,203][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:35:56,251][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:35:56,283][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:36:47,456][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:36:47,516][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:36:47,568][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:38:04,691][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:38:04,818][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:38:04,864][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:38:16,620][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:39:15,167][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:39:15,203][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:39:15,232][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:39:31,957][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:40:46,084][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:40:46,126][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:40:46,165][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:40:51,402][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:41:47,859][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:41:47,911][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:41:47,945][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:41:50,793][INFO][infinite.main] Edit Inventory
+[2015-01-06 10:43:14,784][INFO][infinite.core] Login Button Pressed
+[2015-01-06 10:43:14,838][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 10:43:14,865][INFO][infinite.core] successfully logged in admin
+[2015-01-06 10:43:19,361][INFO][infinite.main] Edit Inventory
+[2015-01-06 11:13:48,389][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:13:48,433][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:13:48,452][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:14:11,294][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:14:11,400][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:14:11,440][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:14:14,030][INFO][infinite.main] Edit Inventory
+[2015-01-06 11:44:57,010][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:44:57,153][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:44:57,208][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:46:43,775][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:46:43,863][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:46:43,903][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:47:14,209][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:47:14,577][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:47:14,612][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:48:19,959][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:48:20,044][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:48:20,082][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:49:05,872][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:49:05,947][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:49:06,000][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:49:19,387][INFO][layout.sales] Exit Button Pressed
+[2015-01-06 11:49:23,404][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:49:26,177][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:49:32,923][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:49:34,141][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:49:42,299][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:49:43,098][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:51:53,215][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:51:53,299][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:51:53,335][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:51:57,921][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:51:58,863][INFO][layout.sales] New inventory added:> [VAT 69][1 litre]
+[2015-01-06 11:54:13,841][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:54:13,923][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:54:13,969][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:54:19,005][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:54:26,231][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:54:30,933][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:54:31,725][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:54:58,583][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:54:58,638][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:54:58,657][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:55:02,727][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:55:06,737][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:55:10,431][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:55:14,686][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:56:44,580][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:56:44,660][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:56:44,706][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:56:50,762][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:56:52,155][ERROR][layout.sales] Add Inventory E =>  Format specifier 's'
+[2015-01-06 11:57:19,335][INFO][infinite.core] Login Button Pressed
+[2015-01-06 11:57:19,441][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 11:57:19,476][INFO][infinite.core] successfully logged in admin
+[2015-01-06 11:57:25,018][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 11:57:26,164][INFO][layout.sales] Cancelling addition of inentory:> [VAT 69][1 litre]
+[2015-01-06 12:00:06,360][INFO][infinite.core] Login Button Pressed
+[2015-01-06 12:00:06,413][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 12:00:06,440][INFO][infinite.core] successfully logged in admin
+[2015-01-06 12:00:12,686][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:00:14,369][INFO][layout.sales] Cancelling addition of inentory:> [VAT 69][1 litre]
+[2015-01-06 12:00:19,859][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:00:20,963][INFO][layout.sales] New inventory added:> [captain morgan][750ml]
+[2015-01-06 12:00:28,395][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:00:29,953][INFO][layout.sales] New inventory added:> [smirnoff][350ml]
+[2015-01-06 12:00:36,612][INFO][infinite.main] Show Sales
+[2015-01-06 12:01:09,425][INFO][infinite.core] Login Button Pressed
+[2015-01-06 12:01:09,457][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 12:01:09,482][INFO][infinite.core] successfully logged in admin
+[2015-01-06 12:01:11,754][INFO][infinite.main] Show Sales
+[2015-01-06 12:01:51,915][INFO][infinite.core] Login Button Pressed
+[2015-01-06 12:01:51,961][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 12:01:51,987][INFO][infinite.core] successfully logged in admin
+[2015-01-06 12:01:56,920][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:01:57,788][INFO][layout.sales] New inventory added:> [smirnoff][350ml]
+[2015-01-06 12:02:01,954][INFO][infinite.main] Show Sales
+[2015-01-06 12:02:41,964][INFO][infinite.main] Show Sales
+[2015-01-06 12:02:50,532][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:02:51,500][INFO][layout.sales] New inventory added:> [smirnoff][350ml]
+[2015-01-06 12:02:55,096][INFO][layout.sales] Exit Button Pressed
+[2015-01-06 12:03:02,014][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:03:02,917][INFO][layout.sales] New inventory added:> [jameson][750ml]
+[2015-01-06 12:03:09,903][INFO][layout.sales] Inventory Save Button Pressed
+[2015-01-06 12:03:10,804][INFO][layout.sales] New inventory added:> [VAT 69][750ml]
+[2015-01-06 12:03:14,635][INFO][infinite.main] Show Sales
+[2015-01-06 13:59:46,191][INFO][infinite.core] Login Button Pressed
+[2015-01-06 13:59:46,272][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 13:59:46,302][INFO][infinite.core] successfully logged in admin
+[2015-01-06 14:21:14,438][INFO][infinite.core] Login Button Pressed
+[2015-01-06 14:21:14,467][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 14:21:14,501][INFO][infinite.core] successfully logged in admin
+[2015-01-06 14:22:16,055][INFO][infinite.core] Login Button Pressed
+[2015-01-06 14:22:16,073][INFO][infinite.core] successfully logged in admin to database
+[2015-01-06 14:22:16,098][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:19:55,102][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:19:55,422][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:19:55,469][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:20:17,995][INFO][infinite.main] Show Login Logs
+[2015-01-07 16:24:11,427][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:24:11,513][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:24:11,546][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:25:27,696][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:25:27,772][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:25:27,805][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:33:23,776][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:33:23,860][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:33:23,878][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:34:59,671][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:34:59,747][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:34:59,773][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:42:50,319][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:42:50,428][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:42:50,467][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:49:55,082][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:49:55,190][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:49:55,209][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:50:53,172][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:50:53,300][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:50:53,332][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:52:18,444][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:52:18,564][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:52:18,615][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:52:39,343][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:52:39,466][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:52:39,510][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:53:04,702][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:53:04,732][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:53:04,767][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:54:24,353][INFO][infinite.core] Login Button Pressed
+[2015-01-07 16:54:24,397][INFO][infinite.core] successfully logged in admin to database
+[2015-01-07 16:54:24,433][INFO][infinite.core] successfully logged in admin
+[2015-01-07 16:54:33,542][INFO][infinite.main] Show Login Logs
+[2015-01-07 16:54:41,242][INFO][infinite.main] Show Audit Logs
+[2015-01-07 16:55:28,345][INFO][infinite.main] Show Admin
+[2015-01-07 16:55:32,239][INFO][infinite.main] Show Inventory
+[2015-01-07 16:55:36,222][INFO][infinite.main] Show Sales

@@ -20,24 +20,56 @@
      :user user
      :password password}))
 
+(def hennessy (atom []))
 
 (defn list-admin []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
    (sql/with-query-results rows ["select * from tbl_login"]      ; execute query
-    (log/info rows )rows)))
+    (doall rows ))))
+
+;(list-admin)
+
+(defn get-henessy []
+  "Function display system admin"
+  (reset! hennessy [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+    (when (> x 0)
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales where dayofweek(date_added)=%d and liquor='henessy'" x)]      ; execute query
+      (doall rows )
+      ;(println x "-" (swap! hennessy conj (vals (nth rows 0))))
+      (println x "-" (swap! hennessy conj(nth (vals (nth rows 0)) 0))))
+      (recur (- x 1))
+      )))@hennessy)
+
+(get-henessy)
+
+(defn list-inventory []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select * from tbl_inventory"]      ; execute query
+    (doall rows))))
+
+;(list-inventory)
+
+(defn list-sales []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+    (sql/with-query-results rows ["select * from tbl_sales"]      ; execute query
+     (doall rows))))
 
 (defn list-login-logs []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
    (sql/with-query-results rows ["select * from tbl_login_logs"]      ; execute query
-    (log/info rows )rows)))
+    (doall rows ))))
 
 (defn list-audit-logs []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
    (sql/with-query-results rows ["select * from tbl_audit_logs"]      ; execute query
-     (log/info rows )rows)))
+     (doall rows ))))
 
 (defn delete-admin
   "Function deletes an admin"
@@ -68,11 +100,7 @@
 ;(list-admin)
 ;(:username (nth(list-admin)2))
 
-(defn list-inventory []
-  "Function display system admin"
-  (sql/with-connection db                                   ; open db connection
-   (sql/with-query-results rows ["select * from tbl_add_inventory"]      ; execute query
-     (log/info rows )rows)))
+
 
 (defn admin-exists?
   [username]
@@ -162,13 +190,13 @@
   "Function inserts inventory to db"
   (let [sql "insert into inventoryapp.tbl_inventory (liquor,brand,size,quantity,price,date) values (?, ?, ?, ?, ?, NOW())"]
     (sql/with-connection db
-                         (sql/do-prepared sql [liquor brand size quantity price] ))))
+     (sql/do-prepared sql [liquor brand size quantity price] ))))
 
 (defn insert-sales [liquor size]
   "Function inserts inventory to db"
-  (let [sql "insert into inventoryapp.tbl_sales (liquor,size) values (?, ?)"]
+  (let [sql "insert into inventoryapp.tbl_sales (liquor,size,date_added) values (?, ?, now())"]
     (sql/with-connection db
-                         (sql/do-prepared sql [liquor size]))))
+     (sql/do-prepared sql [liquor size]))))
 
 ;(insert "test" "test")
 
@@ -202,17 +230,19 @@
 (defn get-liqours []
   (reset! liquor-atom [])
   (sql/with-connection db
-                       (sql/with-query-results rs ["select name from tbl_liquor"]
-                                               #_(dorun
-                                                #_ (map #(println %)rs))
-                                               ;(println (:name(second rs)))
-                                               (loop [x (count rs)]
-                                                 (when (not (= x 0))
-                                                   ; (println  "main -> " (:name(nth rs (- x 1))))
-                                                   (swap! liquor-atom conj (:name(nth rs (- x 1))))
-                                                   (recur (dec x))))
-                                               (count rs)
-                                               @liquor-atom )))
+   (sql/with-query-results rs ["select name from tbl_liquor"]
+    #_(dorun
+    #_ (map #(println %)rs))
+    ;(println (:name(second rs)))
+    (loop [x (count rs)]
+     (when (not (= x 0))
+       ; (println  "main -> " (:name(nth rs (- x 1))))
+      (swap! liquor-atom conj (:name(nth rs (- x 1))))
+      (recur (dec x))))
+       (count rs)
+        @liquor-atom )))
+
+;(get-liqours)
 
 ;; get brands
 (defn get-brands []

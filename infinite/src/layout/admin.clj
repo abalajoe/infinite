@@ -1,9 +1,9 @@
 (ns layout.admin
   (:import (javax.swing JFrame JLabel JDialog JPanel JTextField
                         JButton JOptionPane BorderFactory AbstractAction
-                        JOptionPane JScrollPane SwingUtilities)
+                        JOptionPane)
            (java.awt.event ActionListener MouseAdapter)
-           (java.awt GridBagLayout Insets GridLayout Dimension))
+           (java.awt GridBagLayout Insets Dimension))
   (:require [clojure.tools.logging :as log]
             [model.db :as db]
             [util.utils :as utl]
@@ -257,14 +257,13 @@
                          (let [coordinates (.getPoint e)
                                row-count (.rowAtPoint utl/edit-admin-table coordinates)
                                column-count (.columnAtPoint utl/edit-admin-table coordinates)]
-                           ;(prn "click r >>> " row-count)
-                           ; (prn "click c >>> " column-count)
-                           ;(prn "ID >>> " (:username(nth (db/list-admin)row-count)))
-                           (let [id (:id(nth (db/list-admin)row-count))
+                           (println "mouse...!!")
+                           #_(let [id (:id(nth (db/list-admin)row-count))
                                  username (:username(nth (db/list-admin)row-count))
                                  password (:password(nth (db/list-admin)row-count))]
                              (dialog-string nil (str id) username password))
-                           (flush))))))
+                           ;(flush)
+                           )))))
 ;; admin frame
 (defn exec-admin-frame
   "Function exposes admin frame"
