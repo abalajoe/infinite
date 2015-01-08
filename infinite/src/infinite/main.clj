@@ -7,12 +7,16 @@
             [layout.admin :as admin]
             [layout.sales :as sales]
             [layout.help :as help]
+            [layout.analysis :as analysis]
             [util.utils :as utl]
             [model.db :as db])
   (:use [incanter core charts pdf stats io datasets]))
 
 ;; main frame
 (def main-frame)
+
+;; main frame jframe
+(def frame (JFrame. "Infinite Inventory"))
 
 ;; days of the week
 (def days ["Mon" "Tue" "Wed" "Thur" "Fri" "Sat" "Sun"])
@@ -209,9 +213,40 @@
         (.setMnemonic KeyEvent/VK_D)
         (.add
           (doto
-            (JMenuItem. "About")
-            (.setToolTipText "About")
-            (.setMnemonic KeyEvent/VK_A)))))
+            (JMenuItem. "Liquor Taste")
+            (.setToolTipText "Liquor Taste")
+            (.setMnemonic KeyEvent/VK_L)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Taste")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Taste" (db/liquor-names))
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Liquor Brands")
+            (.setToolTipText "Liquor Brand")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Brand")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Brands" (db/liquor-brand))
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Liquor Size")
+            (.setToolTipText "Liquor Size")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Size")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Size" (db/liquor-size))
+                  )))))))
     (.add
       (doto (JMenu. "Reports")
         (.setToolTipText "Reports")
@@ -256,7 +291,8 @@
             (.addActionListener
               (proxy [ActionListener] []
                 (actionPerformed [e]
-                  (help/dialog-string nil)
+                 ; (help/dialog-string nil)
+                  (analysis/liquor-piechart)
                   )))))))))
 
 ;; Line Chart Panel
@@ -284,7 +320,7 @@
   ;; main frame
   (def main-frame
     (doto
-      (new JFrame "Infinite")
+      frame
       (.setContentPane line-chart-panel)
       (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
       (.setJMenuBar menuBar)

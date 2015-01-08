@@ -1183,3 +1183,36 @@
 [2015-01-07 16:55:28,345][INFO][infinite.main] Show Admin
 [2015-01-07 16:55:32,239][INFO][infinite.main] Show Inventory
 [2015-01-07 16:55:36,222][INFO][infinite.main] Show Sales
+[2015-01-08 15:40:20,287][INFO][infinite.core] Login Button Pressed
+[2015-01-08 15:40:20,489][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 15:40:20,545][INFO][infinite.core] successfully logged in admin
+[2015-01-08 15:40:29,583][INFO][infinite.main] Show Login Logs
+[2015-01-08 15:40:34,058][INFO][infinite.main] Show Audit Logs
+[2015-01-08 16:04:27,283][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:04:27,315][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:04:27,343][INFO][infinite.core] successfully logged in admin
+[2015-01-08 16:35:09,876][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:35:09,905][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:35:09,942][INFO][infinite.core] successfully logged in admin
+[2015-01-08 16:36:15,080][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:36:15,113][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:36:15,133][INFO][infinite.core] successfully logged in admin
+[2015-01-08 16:38:12,317][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:38:12,347][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:38:12,367][INFO][infinite.core] successfully logged in admin
+[2015-01-08 16:39:08,220][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:39:08,251][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:39:08,279][INFO][infinite.core] successfully logged in admin
+[2015-01-08 16:40:16,904][INFO][infinite.core] Login Button Pressed
+[2015-01-08 16:40:16,935][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 16:40:16,963][INFO][infinite.core] successfully logged in admin
+[2015-01-08 17:37:41,293][INFO][infinite.core] Login Button Pressed
+[2015-01-08 17:37:41,388][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 17:37:41,470][INFO][infinite.core] successfully logged in admin
+[2015-01-08 17:37:45,052][INFO][infinite.main] Liquor Taste
+[2015-01-08 17:37:52,340][INFO][infinite.main] Liquor Brand
+[2015-01-08 17:37:59,044][INFO][infinite.main] Liquor Size
+[2015-01-08 17:38:47,136][INFO][infinite.core] Login Button Pressed
+[2015-01-08 17:38:47,220][INFO][infinite.core] successfully logged in admin to database
+[2015-01-08 17:38:47,263][INFO][infinite.core] successfully logged in admin
+[2015-01-08 17:38:49,530][INFO][infinite.main] Liquor Taste

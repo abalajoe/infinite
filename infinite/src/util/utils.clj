@@ -1,16 +1,25 @@
 ;; namespace & libs
 ;; Namespace contains helper functions
 (ns util.utils
-  (:import (javax.swing JOptionPane JTable SwingUtilities JFrame JPanel JScrollPane)
+  (:import (javax.swing JOptionPane JTable SwingUtilities JFrame JPanel JScrollPane JDialog)
            (javax.swing.table AbstractTableModel)
            (java.awt GridLayout Dimension)
-           (java.awt.event MouseAdapter))
+           (java.awt.event MouseAdapter)
+           (org.jfree.chart ChartPanel ChartFactory)
+           (org.jfree.chart.plot PlotOrientation)
+           (org.jfree.data.general DefaultPieDataset))
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str])
   (:require [clojure.tools.logging :as log]))
 
 ;; configuration-file path
 (def conf "E:\\infinite\\infinite\\src\\config.properties")
+
+;;; Vars to control some default plotting behaviors ;;;
+(def ^:dynamic *legend* true)
+(def ^:dynamic *tooltips* true)
+(def ^:dynamic *urls* true)
+(def ^:dynamic *orientation* PlotOrientation/VERTICAL)
 
 (defn- load-config
   "Function loads configuration file"
@@ -65,6 +74,36 @@
                  (recur (cons `(.add ~cntr ~expr ~c)
                               result)
                         (next body)))))))))
+
+(defn- pie-dataset
+  "Internal function to convert from a sequence of pairs into a pie chart dataset"
+  ([data]
+    (let [pds (new DefaultPieDataset)]
+      (doseq [i data] (.setValue pds (first i) (second i)))
+      pds)))
+
+(defn pie
+  "Create a single pie chart from a sequence of category-value pairs.
+   Each category-value pair should itself be a sequence.
+   e.g. => (pie \"This is the Title\" '((\"Emacs\" 20) (\"Vi\" 15) (\"Eclipse\" 30)))"
+  ([title pairs]
+    (ChartFactory/createPieChart
+      title (pie-dataset pairs) *legend* *tooltips* *urls*)))
+
+(defn dialog-box
+  "Function displays dialog box"
+  [data-ref title product]
+  (let [dialog (new JDialog (@data-ref :owner) true)]
+    (doto dialog
+      (.add (new ChartPanel
+                 (pie title product)))
+      (.setSize 500 500)
+      (.setLocationRelativeTo nil)
+      (.setVisible true))
+    (@data-ref :username)))
+
+(defn dialog-string [owner title product]
+  (dialog-box (ref {:owner owner}) title product))
 
 ;; table model
 (defn model [rows col-names value-at]

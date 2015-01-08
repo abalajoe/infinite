@@ -97,6 +97,29 @@
     (catch Exception e
       (log/errorf "Exception update-admin [%s]" e))))
 
+(defn liquor-names []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select liquor,quantity from tbl_add_inventory"]      ; execute query
+    (for [i (doall rows)] (list (:liquor i) (:quantity i))))))
+;(for [i (doall rows)] (str i))
+
+;(liquor-names)
+
+(defn liquor-brand []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select brand,count(*) as count from tbl_add_inventory group by brand"]      ; execute query
+    (for [i (doall rows)] (list (:brand i) (:count i))))))
+;
+;(liquor-brand)
+
+(defn liquor-size []
+  "Function display system admin"
+  (sql/with-connection db                                   ; open db connection
+   (sql/with-query-results rows ["select size,count(*) as count from tbl_add_inventory group by size"]      ; execute query
+    (for [i (doall rows)] (list (:size i) (:count i))))))
+
 ;(list-admin)
 ;(:username (nth(list-admin)2))
 
@@ -114,8 +137,8 @@
 (defn liquor-names []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
-                       (sql/with-query-results rows ["select liquor,quantity from tbl_add_inventory"]      ; execute query
-                                               (for [i (doall rows)] (list (:liquor i) (:quantity i))))))
+   (sql/with-query-results rows ["select liquor,quantity from tbl_add_inventory"]      ; execute query
+    (for [i (doall rows)] (list (:liquor i) (:quantity i))))))
 ;(for [i (doall rows)] (str i))
 
 ;(liquor-names)
@@ -123,16 +146,16 @@
 (defn liquor-brand []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
-                       (sql/with-query-results rows ["select brand,count(*) as count from tbl_add_inventory group by brand"]      ; execute query
-                                               (for [i (doall rows)] (list (:brand i) (:count i))))))
+   (sql/with-query-results rows ["select brand,count(*) as count from tbl_add_inventory group by brand"]      ; execute query
+     (for [i (doall rows)] (list (:brand i) (:count i))))))
 ;
 ;(liquor-brand)
 
 (defn liquor-size []
   "Function display system admin"
   (sql/with-connection db                                   ; open db connection
-                       (sql/with-query-results rows ["select size,count(*) as count from tbl_add_inventory group by size"]      ; execute query
-                                               (for [i (doall rows)] (list (:size i) (:count i))))))
+   (sql/with-query-results rows ["select size,count(*) as count from tbl_add_inventory group by size"]      ; execute query
+    (for [i (doall rows)] (list (:size i) (:count i))))))
 
 ;(liquor-size)
 
@@ -248,23 +271,23 @@
 (defn get-brands []
   (reset! brand-atom [])
   (sql/with-connection db
-                       (sql/with-query-results rs ["select name from tbl_brands"]
-                                               #_(dorun
-                                               #_ (map #(println %)rs))
-                                               ;(println (:name(second rs)))
-                                               (loop [x (count rs)]
-                                                 (when (not (= x 0))
-                                                   ; (println  "main -> " (:name(nth rs (- x 1))))
-                                                   (swap! brand-atom conj (:name(nth rs (- x 1))))
-                                                   (recur (dec x))))
-                                               (count rs)
-                                               @brand-atom )))
+   (sql/with-query-results rs ["select name from tbl_brands"]
+    #_(dorun
+    #_ (map #(println %)rs))
+     ;(println (:name(second rs)))
+     (loop [x (count rs)]
+      (when (not (= x 0))
+       ; (println  "main -> " (:name(nth rs (- x 1))))
+       (swap! brand-atom conj (:name(nth rs (- x 1))))
+        (recur (dec x))))
+        (count rs)
+          @brand-atom )))
 
 ;; get size
 (defn get-size []
   (reset! size-atom [])
   (sql/with-connection db
-                       (sql/with-query-results rs ["select size from tbl_size"]
+    (sql/with-query-results rs ["select size from tbl_size"]
                                                #_(dorun
                                                 #_ (map #(println %)rs))
                                                ;(println (:name(second rs)))
