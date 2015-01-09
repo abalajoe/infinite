@@ -43,7 +43,7 @@
       (recur (- x 1))
       )))@hennessy)
 
-(get-henessy)
+;(get-henessy)
 
 (defn list-inventory []
   "Function display system admin"
@@ -227,20 +227,28 @@
   (sql/with-connection db
     (sql/do-prepared sql ["abala" "abala"] )))
 
-(defn login [^String username ^String password]
+(defn login-test [^String username ^String password ^String type]
   (sql/with-connection db
-     (sql/with-query-results rs ["select * from login where username=? and password=?" username password]
+     (sql/with-query-results rs ["select * from tbl_login_test where username=? and password=? and type=?" username password type]
        (dorun (map #(println %) rs))
          (count rs))))
+
+;(login-test "user" "user" "user")
+
+(defn login [^String username ^String password]
+  (sql/with-connection db
+   (sql/with-query-results rs ["select * from login where username=? and password=?" username password]
+    (dorun (map #(println %) rs))
+     (count rs))))
 
 ;(login "abala" "abalat")
 
 (defn check-admin [^String username]
   "Function checks if specified admin exists"
   (sql/with-connection db                                   ;; connect to db
-                       (sql/with-query-results rs ["select * from login where username=?" username ] ;; execute query
-                                               (dorun (map #(println %) rs))
-                                               (count rs))))
+   (sql/with-query-results rs ["select * from login where username=?" username ] ;; execute query
+    (dorun (map #(println %) rs))
+     (count rs))))
 
 ;(check-admin "admin")
 
@@ -248,6 +256,7 @@
 (def liquor-atom (atom []))
 (def brand-atom (atom []))
 (def size-atom (atom []))
+(def user-type-atom (atom []))
 
 ;; get liqours
 (defn get-liqours []
@@ -298,8 +307,22 @@
                                                    (recur (dec x))))
                                                (count rs)
                                                @size-atom )))
+
 ;(get-brands)
 
+(defn get-user-type []
+  (reset! user-type-atom [])
+  (sql/with-connection db
+   (sql/with-query-results rs ["select type from tbl_login_test"]
+    (loop [x (count rs)]
+    (when (not (= x 0))
+    ; (println  "main -> " (:name(nth rs (- x 1))))
+    (swap! user-type-atom conj (:type(nth rs (- x 1))))
+     (recur (dec x))))
+     (count rs)
+       @user-type-atom )))
+
+;(get-user-type)
 
 
 ;; update loans

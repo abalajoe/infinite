@@ -1216,3 +1216,29 @@
 [2015-01-08 17:38:47,220][INFO][infinite.core] successfully logged in admin to database
 [2015-01-08 17:38:47,263][INFO][infinite.core] successfully logged in admin
 [2015-01-08 17:38:49,530][INFO][infinite.main] Liquor Taste
+[2015-01-09 13:31:48,860][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:31:48,894][INFO][infinite.core] credentials incorrect!!
+[2015-01-09 13:31:54,961][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:31:55,234][INFO][infinite.core] successfully logged in admin to database
+[2015-01-09 13:31:55,280][INFO][infinite.core] successfully logged in admin
+[2015-01-09 13:33:41,141][INFO][infinite.core] #<JFrame javax.swing.JFrame[frame0,0,0,0x0,invalid,hidden,layout=java.awt.BorderLayout,title=Duste Inventory,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,0x0,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]> initializing frame..
+[2015-01-09 13:33:55,064][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:33:59,130][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:34:39,498][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:34:39,535][INFO][infinite.core] successfully logged in admin to database
+[2015-01-09 13:34:39,551][INFO][infinite.core] successfully logged in admin
+[2015-01-09 13:34:47,132][INFO][infinite.core] Login Button Pressed
+[2015-01-09 13:34:47,177][INFO][infinite.core] successfully logged in user to database
+[2015-01-09 13:34:47,191][INFO][infinite.core] successfully logged in user
+[2015-01-09 13:34:53,874][INFO][infinite.main] Liquor Taste
+[2015-01-09 14:17:24,746][INFO][infinite.core] Login Button Pressed
+[2015-01-09 14:17:24,792][INFO][infinite.core] successfully logged in user to database
+[2015-01-09 14:17:24,810][INFO][infinite.core] successfully logged in user
+[2015-01-09 14:17:34,169][INFO][infinite.core] Login Button Pressed
+[2015-01-09 14:17:39,388][INFO][infinite.core] Login Button Pressed
+[2015-01-09 14:17:39,410][INFO][infinite.core] credentials incorrect!!
+[2015-01-09 14:17:45,818][INFO][infinite.core] Login Button Pressed
+[2015-01-09 14:17:45,890][INFO][infinite.core] credentials incorrect!!
+[2015-01-09 14:17:54,036][INFO][infinite.core] Login Button Pressed
+[2015-01-09 14:17:54,106][INFO][infinite.core] successfully logged in admin to database
+[2015-01-09 14:17:54,130][INFO][infinite.core] successfully logged in admin

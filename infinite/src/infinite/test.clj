@@ -136,3 +136,23 @@
   frame)
 
 (-main)
+
+
+#_(if (= (db/login-test username password "admin" ) 1)
+               (do
+                 ;(main/status 1)
+                 ; log operation to db
+                 (if (= (db/insert-login-logs username) (list 1))
+                   (log/infof "successfully logged in %s to database" username)
+                   (log/errorf "failed to log in %s to database" username))
+                 ; close current jframe
+                 (.dispose login-frame)
+                 ; open main frame
+                 (main/exec-main-frame)
+                 (log/infof "successfully logged in %s" username)
+                 )
+               (do (log/info "credentials incorrect!!")
+                   (clear-login-fields)
+                   (JOptionPane/showMessageDialog
+                     nil "Incorrect Credentials!" "Login usuccessful"
+                     JOptionPane/ERROR_MESSAGE)))

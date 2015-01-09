@@ -15,6 +15,9 @@
 ;; main frame
 (def main-frame)
 
+;; admin or user
+(def status (atom nil))
+
 ;; main frame jframe
 (def frame (JFrame. "Infinite Inventory"))
 
@@ -34,6 +37,135 @@
                       vodka
                       :legend true
                       :series-label "Vodka"))
+
+;; menubar
+(def user-menuBar
+  (doto (JMenuBar.)
+    (.add
+      (doto (JMenu. "File")
+        (.setMnemonic KeyEvent/VK_F)                        ; set the mnemonic of the menu
+        (.setToolTipText "File")                            ; set tool tip text of the menu
+        (.add                                           ; add menu item
+          (doto
+            (JMenuItem. "Print")                        ; create menu item with lable
+            (.setMnemonic KeyEvent/VK_P)                ; set mnemonic of menu item
+            (.setToolTipText "Print")))                 ; set tool tip text of menu item
+        (.add
+          (doto
+            (JMenuItem. "Exit")
+            (.setToolTipText "Exit")
+            (.setMnemonic KeyEvent/VK_E)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Exit Application")
+                  (System/exit 0))))))))
+    (.add
+      (doto (JMenu. "Edit")
+        (.setToolTipText "Edit")
+        (.setMnemonic KeyEvent/VK_E)
+        (.add
+          (doto (JMenu. "Sales")
+            (.setToolTipText "Sales")
+            (.setMnemonic KeyEvent/VK_A)
+            (.add (doto (JMenuItem. "Add Sales")
+                    (.setToolTipText "Add Sales")
+                    (.setMnemonic KeyEvent/VK_A)
+                    (.addActionListener
+                      (proxy [ActionListener] []
+                        (actionPerformed [e]
+                          (println "Add Sales")
+                          (sales/exec-sales-frame)
+                          )))))
+            (.add (doto (JMenuItem. "Edit Sales")
+                    (.setToolTipText "Edit Sales")
+                    (.setMnemonic KeyEvent/VK_E)
+                    (.addActionListener
+                      (proxy [ActionListener] []
+                        (actionPerformed [e]
+                          (println "Edit Admin")
+                          ; display table to edit admin
+                          ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
+                          (utl/display-table (db/list-sales) "Edit Sales" utl/edit-sales-table)
+                          )))))))))
+    (.add
+      (doto (JMenu. "View")
+        (.setMnemonic KeyEvent/VK_V)
+        (.add (doto (JMenuItem. "Inventory")
+                (.setToolTipText "Inventory")
+                (.setMnemonic KeyEvent/VK_I)
+                (.addActionListener
+                  (proxy [ActionListener] []
+                    (actionPerformed [e]
+                      (log/info "Show Inventory")
+                      ; (tbl/model)
+                      (utl/display-table (db/list-inventory) "Display Inventory" (JTable.))
+                      )))))
+        (.add (doto (JMenuItem. "Sales")
+                (.setToolTipText "Sales")
+                (.setMnemonic KeyEvent/VK_S)
+                (.addActionListener
+                  (proxy [ActionListener] []
+                    (actionPerformed [e]
+                      (log/info "Show Sales")
+                      ; (tbl/model)
+                      (utl/display-table (db/list-sales) "Display admin" (JTable.))
+                      )))))))
+    (.add
+      (doto (JMenu. "Data Analysis")
+        (.setToolTipText "Data Analysis")
+        (.setMnemonic KeyEvent/VK_D)
+        (.add
+          (doto
+            (JMenuItem. "Liquor Taste")
+            (.setToolTipText "Liquor Taste")
+            (.setMnemonic KeyEvent/VK_L)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Taste")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Taste" (db/liquor-names))
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Liquor Brands")
+            (.setToolTipText "Liquor Brand")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Brand")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Brands" (db/liquor-brand))
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Liquor Size")
+            (.setToolTipText "Liquor Size")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Liquor Size")
+                  ; (tbl/model)
+                  (utl/dialog-string nil "Liquor Size" (db/liquor-size))
+                  )))))))
+    (.add
+      (doto (JMenu. "Help")
+        (.setToolTipText "Help")
+        (.setMnemonic KeyEvent/VK_H)
+        (.add
+          (doto
+            (JMenuItem. "About")
+            (.setToolTipText "About")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  ; (help/dialog-string nil)
+                  (analysis/liquor-piechart)
+                  )))))))))
 
 ;; menubar
 (def menuBar
@@ -324,6 +456,20 @@
       (.setContentPane line-chart-panel)
       (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
       (.setJMenuBar menuBar)
+      (.setVisible true)
+      (.setSize 950 550)
+      (.setLocationRelativeTo nil))))
+
+;; call frame
+(defn exec-user-frame []
+  (println "call frame triggered....")
+  ;; main frame
+  (def main-frame
+    (doto
+      frame
+      (.setContentPane line-chart-panel)
+      (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
+      (.setJMenuBar user-menuBar)
       (.setVisible true)
       (.setSize 950 550)
       (.setLocationRelativeTo nil))))
