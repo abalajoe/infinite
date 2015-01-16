@@ -1,7 +1,7 @@
 ;;; namespace & libs
 (ns infinite.core
-  (:import (javax.swing JOptionPane)
-           (javax.swing JFrame JLabel JPanel JTextField JButton JOptionPane BorderFactory)
+  (:import (javax.swing JOptionPane JPasswordField)
+           (javax.swing JFrame JComboBox JLabel JPanel JTextField JButton JOptionPane BorderFactory)
            (java.awt.event ActionListener)
            (java.awt GridBagLayout Insets)
            (java.awt Dimension))
@@ -23,7 +23,7 @@
 
 ;; textfields
 (def username-field (doto (new JTextField)(.setColumns 25)))
-(def password-field (doto (new JTextField)(.setColumns 25)))
+(def password-field (doto (new JPasswordField)(.setColumns 25)))
 
 ;; buttons
 (def login-button (doto (new JButton "Login")(.setPreferredSize (new Dimension 70 20))))

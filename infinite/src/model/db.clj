@@ -20,7 +20,12 @@
      :user user
      :password password}))
 
-(def hennessy (atom []))
+(def vodka (atom []))
+(def whisky (atom []))
+(def gin (atom []))
+(def brandy (atom []))
+(def beer (atom []))
+(def beverage (atom []))
 
 (defn list-admin []
   "Function display system admin"
@@ -30,20 +35,102 @@
 
 ;(list-admin)
 
-(defn get-henessy []
+(defn get-vodka-line-chart []
   "Function display system admin"
-  (reset! hennessy [])                                      ; reset hennesy to empty vector everytime you call function
+  (reset! vodka [])                                      ; reset hennesy to empty vector everytime you call function
   (sql/with-connection db
    (loop [x 7]
     (when (> x 0)
-     (sql/with-query-results rows [(format  "select count(*) from tbl_sales where dayofweek(date_added)=%d and liquor='henessy'" x)]      ; execute query
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Vodka'" x)]      ; execute query
       (doall rows )
       ;(println x "-" (swap! hennessy conj (vals (nth rows 0))))
-      (println x "-" (swap! hennessy conj(nth (vals (nth rows 0)) 0))))
+     ; (println x "-" (swap! vodka conj(nth (vals (nth rows 0)) 0)))
+     (swap! vodka conj(nth (vals (nth rows 0)) 0))
+      )
       (recur (- x 1))
-      )))@hennessy)
+      )))@vodka)
 
-;(get-henessy)
+;(get-vodka-line-chart)
+
+(defn get-whisky-line-chart []
+  "Function display system admin"
+  (reset! whisky [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+    (when (> x 0)
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Whisky'" x)]      ; execute query
+      (doall rows )
+      ;(println x "-" (swap! whisky conj(nth (vals (nth rows 0)) 0)))
+      (swap! whisky conj(nth (vals (nth rows 0)) 0))
+      )
+       (recur (- x 1))
+        )))@whisky)
+
+;(get-whisky-line-chart)
+
+(defn get-brandy-line-chart []
+  "Function display system admin"
+  (reset! brandy [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+    (when (> x 0)
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Brandy'" x)]      ; execute query
+      (doall rows )
+       ;(println x "-" (swap! brandy conj(nth (vals (nth rows 0)) 0)))
+       (swap! brandy conj(nth (vals (nth rows 0)) 0))
+       )
+       (recur (- x 1))
+       )))@brandy)
+
+;(get-brandy-line-chart)
+
+(defn get-gin-line-chart []
+  "Function display system admin"
+  (reset! gin [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+   (when (> x 0)
+    (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Gin'" x)]      ; execute query
+     (doall rows )
+     ;(println x "-" (swap! gin conj(nth (vals (nth rows 0)) 0)))
+     (swap! gin conj(nth (vals (nth rows 0)) 0))
+     )
+      (recur (- x 1))
+      )))@gin)
+
+;(get-gin-line-chart)
+
+(defn get-beer-line-chart []
+  "Function display system admin"
+  (reset! beer [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+    (when (> x 0)
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Beer'" x)]      ; execute query
+      (doall rows )
+       ;(println x "-" (swap! beer conj(nth (vals (nth rows 0)) 0)))
+       (swap! beer conj(nth (vals (nth rows 0)) 0))
+       )
+        (recur (- x 1))
+        )))@beer)
+
+;(get-beer-line-chart)
+
+(defn get-beverage-line-chart []
+  "Function display system admin"
+  (reset! beverage [])                                      ; reset hennesy to empty vector everytime you call function
+  (sql/with-connection db
+   (loop [x 7]
+    (when (> x 0)
+     (sql/with-query-results rows [(format  "select count(*) from tbl_sales join tbl_prod on tbl_sales.product=tbl_prod.name where dayofweek(date_added)=%d and brand='Beverage'" x)]      ; execute query
+      (doall rows )
+       ;(println x "-" (swap! beverage conj(nth (vals (nth rows 0)) 0)))
+       (swap! beverage conj(nth (vals (nth rows 0)) 0))
+       )
+       (recur (- x 1))
+        )))@beverage)
+
+;(get-beverage-line-chart)
 
 (defn list-inventory []
   "Function display system admin"
@@ -235,6 +322,13 @@
 
 ;(login-test "user" "user" "user")
 
+(defn login-test-pdf []
+  (sql/with-connection db
+   (sql/with-query-results rs ["select * from tbl_login_test"]
+    (doall rs))))
+
+;(login-test-pdf)
+
 (defn login [^String username ^String password]
   (sql/with-connection db
    (sql/with-query-results rs ["select * from login where username=? and password=?" username password]
@@ -262,7 +356,7 @@
 (defn get-liqours []
   (reset! liquor-atom [])
   (sql/with-connection db
-   (sql/with-query-results rs ["select name from tbl_liquor"]
+   (sql/with-query-results rs ["select name from tbl_prod"]
     #_(dorun
     #_ (map #(println %)rs))
     ;(println (:name(second rs)))

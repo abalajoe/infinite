@@ -1,7 +1,7 @@
 (ns layout.admin
   (:import (javax.swing JFrame JLabel JDialog JPanel JTextField
                         JButton JOptionPane BorderFactory AbstractAction
-                        JOptionPane)
+                        JOptionPane JPasswordField)
            (java.awt.event ActionListener MouseAdapter)
            (java.awt GridBagLayout Insets Dimension))
   (:require [clojure.tools.logging :as log]
@@ -19,8 +19,8 @@
 
 ;; textfields
 (def username-field (doto (new JTextField)(.setColumns 25)))
-(def password-field (doto (new JTextField)(.setColumns 25)))
-(def confirm-password-field (doto (new JTextField)(.setColumns 25)))
+(def password-field (doto (new JPasswordField)(.setColumns 25)))
+(def confirm-password-field (doto (new JPasswordField)(.setColumns 25)))
 
 ;; buttons
 (def add-button (doto (new JButton "Add")(.setPreferredSize (new Dimension 70 20))))

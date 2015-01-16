@@ -6,7 +6,8 @@
   (:require [clojure.tools.logging :as log]
             [layout.admin :as admin]
             [layout.sales :as sales]
-            [layout.help :as help]
+          ;  [layout.help :as help]
+            [layout.reports :as reports]
             [layout.analysis :as analysis]
             [util.utils :as utl]
             [model.db :as db])
@@ -25,18 +26,17 @@
 (def days ["Mon" "Tue" "Wed" "Thur" "Fri" "Sat" "Sun"])
 
 ;; total sales
-(def sale [10 20 30 40 50 60 70])
-(def vodka [11 21 31 41 51 61 71])
-(def whisky [13 23 33 43 53 63 73])
-(def gin [15 25 35 45 55 65 75])
-(def brandy [17 27 37 47 57 67 77])
-(def beer [19 29 39 49 59 69 79])
-(def beverage [20 30 40 50 60 70 80])
+(def Drinks (db/get-vodka-line-chart)); this is vodka details, i have labeled it Drinks so that the y-axis will be laeled that way
+(def whisky (db/get-whisky-line-chart))
+(def gin (db/get-gin-line-chart))
+(def brandy (db/get-brandy-line-chart))
+(def beer (db/get-beer-line-chart))
+(def beverage (db/get-beverage-line-chart))
 
 (def plot (line-chart days
-                      vodka
+                      Drinks
                       :legend true
-                      :series-label "Vodka"))
+                      :series-label "vodka"))
 
 ;; menubar
 (def user-menuBar
@@ -385,9 +385,52 @@
         (.setMnemonic KeyEvent/VK_R)
         (.add
           (doto
-            (JMenuItem. "About")
-            (.setToolTipText "About")
-            (.setMnemonic KeyEvent/VK_A)))))
+            (JMenuItem. "Admin")
+            (.setToolTipText "Admin Report")
+            (.setMnemonic KeyEvent/VK_A)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Admin Report")
+                  (reports/generate-pdf
+                    "Administrator List"
+                    reports/admin-template
+                    reports/admin-report-data
+                    "E:\\infinitereports\\admin.pdf"
+                    "ID" "USERNAME" "PASSWORD" "TYPE")
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Inventory")
+            (.setToolTipText "Inventory Report")
+            (.setMnemonic KeyEvent/VK_I)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Admin Report")
+                  (reports/generate-pdf
+                    "Inventory List"
+                    reports/inventory-template
+                    reports/inventory-report-data
+                    "E:\\infinitereports\\inventory.pdf"
+                    "ID" "LIQUOR" "BRAND" "SIZE" "QUANTITY" "PRICE" "DATE")
+                  )))))
+        (.add
+          (doto
+            (JMenuItem. "Sales")
+            (.setToolTipText "Sales Report")
+            (.setMnemonic KeyEvent/VK_S)
+            (.addActionListener
+              (proxy [ActionListener] []
+                (actionPerformed [e]
+                  (log/info "Sales Report")
+                  (reports/generate-pdf
+                    "Sales List"
+                    reports/sales-template
+                    reports/sales-report-data
+                    "E:\\infinitereports\\sales.pdf"
+                    "ID" "PRODUCT" "SIZE" "DATE ADDED")
+                  )))))))
     (.add
       (doto (JMenu. "Navigate")
         (.setMnemonic KeyEvent/VK_N)
@@ -423,8 +466,8 @@
             (.addActionListener
               (proxy [ActionListener] []
                 (actionPerformed [e]
-                 ; (help/dialog-string nil)
-                  (analysis/liquor-piechart)
+                 ;(help/dialog-string nil)
+                 ; (analysis/liquor-piechart)
                   )))))))))
 
 ;; Line Chart Panel
@@ -438,7 +481,7 @@
                                   sale
                                   :legend true
                                   :series-label "Drink")))
-    (.add (ChartPanel.(add-categories plot days (db/get-henessy) :series-label "Whisky")))
+    (.add (ChartPanel.(add-categories plot days whisky :series-label "Whisky")))
     (.add (ChartPanel.(add-categories plot days brandy :series-label "Brandy")))
     (.add (ChartPanel.(add-categories plot days gin :series-label "Gin")))
     (.add (ChartPanel.(add-categories plot days beer :series-label "Beer")))
@@ -457,7 +500,7 @@
       (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
       (.setJMenuBar menuBar)
       (.setVisible true)
-      (.setSize 950 550)
+      (.setSize 950 520)
       (.setLocationRelativeTo nil))))
 
 ;; call frame
@@ -471,7 +514,7 @@
       (.setDefaultCloseOperation JFrame/HIDE_ON_CLOSE)
       (.setJMenuBar user-menuBar)
       (.setVisible true)
-      (.setSize 950 550)
+      (.setSize 950 510)
       (.setLocationRelativeTo nil))))
 
 ;(exec-main-frame)
