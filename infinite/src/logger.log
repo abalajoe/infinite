@@ -1365,3 +1365,30 @@
 [2015-01-16 21:31:57,927][INFO][infinite.main] Admin Report
 [2015-01-16 21:32:02,120][INFO][infinite.main] Sales Report
 [2015-01-16 21:32:02,127][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 13:04:22,725][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:04:28,061][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:04:31,195][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:04:36,287][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:04:42,112][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:27:17,463][INFO][infinite.core] Enter Button Pressed
+[2015-01-20 13:27:27,399][INFO][infinite.core] Login Button Pressed
+[2015-01-20 13:27:27,600][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 13:27:27,658][INFO][infinite.core] successfully logged in admin
+[2015-01-20 13:28:37,279][INFO][infinite.core] Enter Button Pressed
+[2015-01-20 13:28:37,310][INFO][infinite.core] successfully logged in user to database
+[2015-01-20 13:28:37,324][INFO][infinite.core] successfully logged in user
+[2015-01-20 13:29:05,610][INFO][infinite.core] Enter Button Pressed
+[2015-01-20 13:29:05,624][INFO][infinite.core] credentials incorrect!!
+[2015-01-20 13:34:07,337][INFO][infinite.core] Enter Button Pressed, clearing fields
+[2015-01-20 13:34:14,866][INFO][infinite.core] Cancel Button Pressed
+[2015-01-20 13:34:30,555][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 13:34:30,576][INFO][infinite.core] credentials incorrect!!
+[2015-01-20 13:34:36,913][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 13:34:36,977][INFO][infinite.core] successfully logged in user to database
+[2015-01-20 13:34:37,013][INFO][infinite.core] successfully logged in user
+[2015-01-20 13:35:40,703][INFO][infinite.core] Enter Button Pressed, exiting
+[2015-01-20 13:36:26,179][INFO][infinite.core] Enter Button Pressed, clearing fields
+[2015-01-20 13:36:30,327][INFO][infinite.core] Enter Button Pressed, clearing fields
+[2015-01-20 13:36:35,365][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 13:36:35,416][INFO][infinite.core] successfully logged in user to database
+[2015-01-20 13:36:35,463][INFO][infinite.core] successfully logged in user

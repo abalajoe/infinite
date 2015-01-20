@@ -2,7 +2,7 @@
 (ns infinite.core
   (:import (javax.swing JOptionPane JPasswordField)
            (javax.swing JFrame JComboBox JLabel JPanel JTextField JButton JOptionPane BorderFactory)
-           (java.awt.event ActionListener)
+           (java.awt.event ActionListener KeyListener KeyEvent)
            (java.awt GridBagLayout Insets)
            (java.awt Dimension))
   (:require [clojure.tools.logging :as log]
@@ -39,77 +39,129 @@
   (.setText username-field "")                              ; clear username field
   (.setText password-field ""))                             ; clear password field
 
-;; login button action
+(defn login-user
+  "This function logs in user to system"
+  []
+  ; get username and password entered by user
+  (let [username (.getText username-field)
+        ;user-name (reset! username (.getText username-field))
+        password (.getText password-field)
+        user-type (.getSelectedItem user-type-combo)]
+    ; check if the user enters all fields
+    (if (or (empty? username)(empty? password))
+      (do
+        (clear-login-fields)
+        (JOptionPane/showMessageDialog
+          nil "Please enter all details!" "Enter all Fields"
+          JOptionPane/INFORMATION_MESSAGE))
+      (do
+        ; check if the credentials are correct
+        (cond
+          (= (db/login-test username password user-type ) 1)
+          (do
+            ;(main/status 1)
+            ; log operation to db
+            (if (= user-type "admin")
+              (do (if (= (db/insert-login-logs username) (list 1))
+                    (log/infof "successfully logged in %s to database" username)
+                    (log/errorf "failed to log in %s to database" username))
+                  ; close current jframe
+                  (.dispose login-frame)
+                  ; open main frame
+                  (main/exec-main-frame)
+                  (log/infof "successfully logged in %s" username))
+              (do
+                ;(main/status 1)
+                ; log operation to db
+                (if (= (db/insert-login-logs username) (list 1))
+                  (log/infof "successfully logged in %s to database" username)
+                  (log/errorf "failed to log in %s to database" username))
+                ; close current jframe
+                (.dispose login-frame)
+                ; open main frame
+                (main/exec-user-frame)
+                (log/infof "successfully logged in %s" username))))
+          ; (= (db/login-test username password user-type ) 1)
+          #_ (do
+             ;(main/status 1)
+             ; log operation to db
+             (if (= (db/insert-login-logs username) (list 1))
+               (log/infof "successfully logged in %s to database" username)
+               (log/errorf "failed to log in %s to database" username))
+             ; close current jframe
+             (.dispose login-frame)
+             ; open main frame
+             (main/exec-user-frame)
+             (log/infof "successfully logged in %s" username))
+          :else (do (log/info "credentials incorrect!!")
+                    (clear-login-fields)
+                    (JOptionPane/showMessageDialog
+                      nil "Incorrect Credentials!" "Login usuccessful"
+                      JOptionPane/ERROR_MESSAGE))
+          )))))
+
+;; login button key listener event
+(. login-button addKeyListener
+   (proxy[KeyListener][]
+     (keyPressed [e]
+       (let [keyCode (.getKeyCode e)]
+         ; check if key pressed is enter key
+         (if (== KeyEvent/VK_ENTER keyCode)
+           (do
+             (log/info "Enter Button Pressed, login user")
+             ; login user
+             (login-user))
+           )))
+     (keyReleased [e])
+     (keyTyped [e])))
+
+;; login button actionlistener event
 (. login-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
        (log/info "Login Button Pressed")
-       ; get username and password entered by user
-       (let [username (.getText username-field)
-             ;user-name (reset! username (.getText username-field))
-             password (.getText password-field)
-             user-type (.getSelectedItem user-type-combo)]
-         ; check if the user enters all fields
-         (if (or (empty? username)(empty? password))
-           (do
-             (clear-login-fields)
-             (JOptionPane/showMessageDialog
-               nil "Please enter all details!" "Enter all Fields"
-               JOptionPane/INFORMATION_MESSAGE))
-           (do
-             ; check if the credentials are correct
-             (cond
-               (= (db/login-test username password user-type ) 1)
-               (do
-                 ;(main/status 1)
-                 ; log operation to db
-                 (if (= user-type "admin")
-                   (do (if (= (db/insert-login-logs username) (list 1))
-                         (log/infof "successfully logged in %s to database" username)
-                         (log/errorf "failed to log in %s to database" username))
-                       ; close current jframe
-                       (.dispose login-frame)
-                       ; open main frame
-                       (main/exec-main-frame)
-                       (log/infof "successfully logged in %s" username))
-                   (do
-                     ;(main/status 1)
-                     ; log operation to db
-                     (if (= (db/insert-login-logs username) (list 1))
-                       (log/infof "successfully logged in %s to database" username)
-                       (log/errorf "failed to log in %s to database" username))
-                     ; close current jframe
-                     (.dispose login-frame)
-                     ; open main frame
-                     (main/exec-user-frame)
-                     (log/infof "successfully logged in %s" username))))
-              ; (= (db/login-test username password user-type ) 1)
-              #_ (do
-                 ;(main/status 1)
-                 ; log operation to db
-                 (if (= (db/insert-login-logs username) (list 1))
-                   (log/infof "successfully logged in %s to database" username)
-                   (log/errorf "failed to log in %s to database" username))
-                 ; close current jframe
-                 (.dispose login-frame)
-                 ; open main frame
-                 (main/exec-user-frame)
-                 (log/infof "successfully logged in %s" username))
-               :else (do (log/info "credentials incorrect!!")
-                          (clear-login-fields)
-                          (JOptionPane/showMessageDialog
-                            nil "Incorrect Credentials!" "Login usuccessful"
-                            JOptionPane/ERROR_MESSAGE))
-               )))))))
+       ; login user
+       (login-user))))
 
-;; change password button action
+;; cancel button keylistener event
+(. cancel-button addKeyListener
+   (proxy[KeyListener][]
+     (keyPressed [e]
+       (let [keyCode (.getKeyCode e)]
+         ; check if key pressed is enter key
+         (if (== KeyEvent/VK_ENTER keyCode)
+           (do
+             (log/info "Enter Button Pressed, clearing fields")
+             ; clear all fields
+             (clear-login-fields))
+           )))
+     (keyReleased [e])
+     (keyTyped [e])))
+
+;; cancel button actionlistener event
 (. cancel-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
+       ; clear all fields
        (clear-login-fields)
        (log/info "Cancel Button Pressed"))))
 
-;; exit button action
+;; exit button keylistener event
+(. exit-button addKeyListener
+   (proxy[KeyListener][]
+     (keyPressed [e]
+       (let [keyCode (.getKeyCode e)]
+         ; check if key pressed is enter key
+         (if (== KeyEvent/VK_ENTER keyCode)
+           (do
+             (log/info "Enter Button Pressed, exiting")
+             ; exit system
+             (System/exit 0))
+           )))
+     (keyReleased [e])
+     (keyTyped [e])))
+
+;; exit button actionlistener event
 (. exit-button addActionListener
    (proxy [ActionListener] []
      (actionPerformed [e]
