@@ -10,27 +10,45 @@
            (org.jfree.data.general DefaultPieDataset))
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str])
-  (:require [clojure.tools.logging :as log]))
+  (:require [clojure.tools.logging :as log])
+  (:require [propertea.core :as propertea])
+  )
+
+
+;===========================================================
+; I used the below block to load configuration in edn format
+;-----------------------------------------------------------
 
 ;; configuration-file path
-(def conf "E:\\infinite\\infinite\\src\\config.properties")
+;(def conf "E:\\infinite\\infinite\\src\\config.properties")
+
+#_(defn- load-config
+  "Function loads configuration file"
+  [filename]
+  (with-open [r (io/reader filename)]
+    (read (java.io.PushbackReader. r))))
+
+#_(defn get-configuration
+  "Function gets configuration"
+  [key]
+  ((load-config conf)key))
+
+;============================================================
+
+;; configuration-file path
+(def config "E:\\infinite\\infinite\\src\\conf.properties")
+
+; get configuration from properties file
+(defn get-configuration
+  "Function gets props"
+  [key]
+  ((propertea/read-properties config)key))
 
 ;;; Vars to control some default plotting behaviors ;;;
 (def ^:dynamic *legend* true)
 (def ^:dynamic *tooltips* true)
 (def ^:dynamic *urls* true)
 (def ^:dynamic *orientation* PlotOrientation/VERTICAL)
-
-(defn- load-config
-  "Function loads configuration file"
-  [filename]
-  (with-open [r (io/reader filename)]
-    (read (java.io.PushbackReader. r))))
-
-(defn get-configuration
-  "Function gets configuration"
-  [key]
-  ((load-config conf)key))
 
 (defn convert-to-long
   "Function converts string to Long"
@@ -156,6 +174,6 @@
 ;; table instance for editing
 
 (def edit-admin-table (JTable.))
-(def test-table (doto (JTable.)))
+(def test-table (JTable.))
 (def edit-inventory-table (JTable.))
 (def edit-sales-table (JTable.))

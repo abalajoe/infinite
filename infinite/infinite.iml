@@ -24,6 +24,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/java.jdbc:0.0.6" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.logging:0.2.6" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.3" level="project" />
+    <orderEntry type="library" name="Leiningen: propertea:1.2.3" level="project" />
     <orderEntry type="library" name="Leiningen: com.lowagie/itext:4.2.1" level="project" />
     <orderEntry type="library" name="Leiningen: org.apache.xmlgraphics/batik-gvt:1.7" level="project" />
     <orderEntry type="library" name="Leiningen: org.jfree/jfreechart:1.0.15" level="project" />
@@ -98,6 +99,7 @@
     <orderEntry type="library" name="Leiningen: org.apache.xmlgraphics/batik-dom:1.7" level="project" />
     <orderEntry type="library" name="Leiningen: org.apache.xmlgraphics/batik-svggen:1.7" level="project" />
     <orderEntry type="library" name="Leiningen: org.apache.xmlgraphics/batik-xml:1.7" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/clojure-contrib:1.2.0" level="project" />
   </component>
 </module>
 

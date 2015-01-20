@@ -1,6 +1,6 @@
 
 (ns infinite.main
-  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable BorderFactory JPanel)
+  (:import (javax.swing JFrame JMenu JMenuBar JMenuItem JTable BorderFactory JPanel JOptionPane JTextArea)
            (java.awt.event ActionListener KeyEvent MouseListener)
            (org.jfree.chart ChartPanel))
   (:require [clojure.tools.logging :as log]
@@ -85,7 +85,6 @@
                         (actionPerformed [e]
                           (println "Edit Admin")
                           ; display table to edit admin
-                          ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                           (utl/display-table (db/list-sales) "Edit Sales" utl/edit-sales-table)
                           )))))))))
     (.add
@@ -214,7 +213,6 @@
                             (actionPerformed [e]
                               (println "Edit Admin")
                               ; display table to edit admin
-                              ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               )))))))
 
@@ -303,7 +301,6 @@
                             (actionPerformed [e]
                               (println "Edit Admin")
                               ; display table to edit admin
-                              ; (utl/display-table (db/list-admin) "Edit Admin" utl/edit-admin-table)
                               (utl/display-table (db/list-sales) "Edit Sales" utl/edit-sales-table)
                               )))))))))
     (.add
@@ -392,12 +389,19 @@
               (proxy [ActionListener] []
                 (actionPerformed [e]
                   (log/info "Admin Report")
-                  (reports/generate-pdf
-                    "Administrator List"
-                    reports/admin-template
-                    reports/admin-report-data
-                    "E:\\infinitereports\\admin.pdf"
-                    "ID" "USERNAME" "PASSWORD" "TYPE")
+                  ; if returned value is not equals to false
+                  (if (not (= false (reports/generate-pdf
+                                    "Administrator List"
+                                    reports/admin-template
+                                    reports/admin-report-data
+                                    "E:\\infinitereports\\admin.pdf"
+                                    "ID" "USERNAME" "PASSWORD" "TYPE")))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generated successfully" "Report generation successful"
+                           JOptionPane/INFORMATION_MESSAGE))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generation failed" "Report generation unsuccessful"
+                           JOptionPane/ERROR_MESSAGE)))
                   )))))
         (.add
           (doto
@@ -408,12 +412,19 @@
               (proxy [ActionListener] []
                 (actionPerformed [e]
                   (log/info "Admin Report")
-                  (reports/generate-pdf
-                    "Inventory List"
-                    reports/inventory-template
-                    reports/inventory-report-data
-                    "E:\\infinitereports\\inventory.pdf"
-                    "ID" "LIQUOR" "BRAND" "SIZE" "QUANTITY" "PRICE" "DATE")
+                  ; if returned value is not equals to false
+                  (if (not (= false (reports/generate-pdf
+                                      "Inventory List"
+                                      reports/inventory-template
+                                      reports/inventory-report-data
+                                      "E:\\infinitereports\\inventory.pdf"
+                                      "ID" "LIQUOR" "BRAND" "SIZE" "QUANTITY" "PRICE" "DATE")))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generated successfully" "Report generation successful"
+                           JOptionPane/INFORMATION_MESSAGE))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generation failed" "Report generation unsuccessful"
+                           JOptionPane/ERROR_MESSAGE)))
                   )))))
         (.add
           (doto
@@ -424,12 +435,19 @@
               (proxy [ActionListener] []
                 (actionPerformed [e]
                   (log/info "Sales Report")
-                  (reports/generate-pdf
-                    "Sales List"
-                    reports/sales-template
-                    reports/sales-report-data
-                    "E:\\infinitereports\\sales.pdf"
-                    "ID" "PRODUCT" "SIZE" "DATE ADDED")
+                  ; if returned value is not false
+                  (if (not (= false (reports/generate-pdf
+                                      "Sales List"
+                                      reports/sales-template
+                                      reports/sales-report-data
+                                      "E:\\infinitereports\\sales.pdf"
+                                      "ID" "PRODUCT" "SIZE" "DATE ADkDED")))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generated successfully" "Report generation successful"
+                           JOptionPane/INFORMATION_MESSAGE))
+                    (do  (JOptionPane/showMessageDialog
+                           nil "Report generation failed" "Report generation unsuccessful"
+                           JOptionPane/ERROR_MESSAGE)))
                   )))))))
     (.add
       (doto (JMenu. "Navigate")
@@ -466,8 +484,9 @@
             (.addActionListener
               (proxy [ActionListener] []
                 (actionPerformed [e]
-                 ;(help/dialog-string nil)
-                 ; (analysis/liquor-piechart)
+                  (JOptionPane/showMessageDialog
+                    nil "Infinite is an Inventory management software\n solutions that keeps track of inventory,\n sales and purchasing." "App Info"
+                    JOptionPane/INFORMATION_MESSAGE)
                   )))))))))
 
 ;; Line Chart Panel

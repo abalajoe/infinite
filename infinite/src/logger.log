@@ -1392,3 +1392,112 @@
 [2015-01-20 13:36:35,365][INFO][infinite.core] Enter Button Pressed, login user
 [2015-01-20 13:36:35,416][INFO][infinite.core] successfully logged in user to database
 [2015-01-20 13:36:35,463][INFO][infinite.core] successfully logged in user
+[2015-01-20 14:10:50,877][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 14:10:50,915][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 14:10:50,948][INFO][infinite.core] successfully logged in admin
+[2015-01-20 14:14:34,221][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:15:52,607][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:01,538][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:05,651][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:06,905][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:08,198][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:18,405][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:19,706][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:26,159][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:27,000][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:27,715][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:28,364][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:16:29,187][ERROR][layout.reports] r.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:20:43,918][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 14:20:43,980][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 14:20:44,015][INFO][infinite.core] successfully logged in admin
+[2015-01-20 14:20:46,976][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:14,287][INFO][infinite.core] Login Button Pressed
+[2015-01-20 14:21:14,314][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 14:21:14,351][INFO][infinite.core] successfully logged in admin
+[2015-01-20 14:21:17,495][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:42,033][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:42,035][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:21:45,257][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:45,260][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:21:49,177][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:49,179][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:21:53,992][INFO][infinite.main] Sales Report
+[2015-01-20 14:21:53,994][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:23:56,213][INFO][infinite.core] Login Button Pressed
+[2015-01-20 14:23:56,242][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 14:23:56,270][INFO][infinite.core] successfully logged in admin
+[2015-01-20 14:23:58,328][INFO][infinite.main] Admin Report
+[2015-01-20 14:24:01,005][INFO][infinite.main] Admin Report
+[2015-01-20 14:24:03,239][INFO][infinite.main] Sales Report
+[2015-01-20 14:24:03,241][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:59:28,337][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:59:47,852][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:59:51,649][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 14:59:54,662][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:00:07,712][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:00:45,098][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:02:23,427][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:02:29,788][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:03:31,338][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:03:35,582][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:04:56,849][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:04:58,194][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:04:59,187][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:05:00,099][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:06:53,997][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:06:54,147][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:06:54,190][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:06:56,583][INFO][infinite.main] Sales Report
+[2015-01-20 15:06:56,586][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:07:01,152][INFO][infinite.main] Sales Report
+[2015-01-20 15:07:01,154][ERROR][layout.reports] E:\infinitereports\sales.pdf (The process cannot access the file because it is being used by another process)
+[2015-01-20 15:07:19,920][INFO][infinite.main] Sales Report
+[2015-01-20 15:10:15,189][INFO][layout.sales] exit
+[2015-01-20 15:10:16,890][INFO][layout.sales] exit
+[2015-01-20 15:10:18,515][INFO][layout.sales] exit
+[2015-01-20 15:10:21,246][INFO][layout.sales] exit
+[2015-01-20 15:10:45,279][INFO][infinite.main] Liquor Taste
+[2015-01-20 15:10:53,802][INFO][infinite.main] Liquor Brand
+[2015-01-20 15:10:58,871][INFO][infinite.main] Show Admin
+[2015-01-20 15:11:03,833][INFO][infinite.main] Liquor Brand
+[2015-01-20 15:11:06,891][INFO][infinite.main] Show Inventory
+[2015-01-20 15:11:10,278][INFO][infinite.main] Show Sales
+[2015-01-20 15:11:30,929][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:11:30,956][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:11:30,993][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:11:33,421][INFO][infinite.main] Admin Report
+[2015-01-20 15:11:36,511][INFO][infinite.main] Liquor Taste
+[2015-01-20 15:11:40,023][INFO][infinite.main] Show Inventory
+[2015-01-20 15:44:05,895][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:44:06,066][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:44:06,096][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:44:10,062][INFO][infinite.main] Show Admin
+[2015-01-20 15:44:27,956][INFO][layout.sales] exit
+[2015-01-20 15:48:02,062][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:48:02,093][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:48:02,119][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:48:56,680][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 15:48:56,910][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:48:56,949][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:55:20,342][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:55:20,367][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:55:20,393][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:57:02,110][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:57:02,142][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:57:02,177][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:58:33,003][INFO][infinite.core] Enter Button Pressed, login user
+[2015-01-20 15:58:33,018][INFO][infinite.core] successfully logged in user to database
+[2015-01-20 15:58:33,033][INFO][infinite.core] successfully logged in user
+[2015-01-20 15:58:45,939][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:58:46,012][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:58:46,049][INFO][infinite.core] successfully logged in admin
+[2015-01-20 15:59:22,006][INFO][infinite.core] Login Button Pressed
+[2015-01-20 15:59:22,084][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 15:59:22,109][INFO][infinite.core] successfully logged in admin
+[2015-01-20 16:00:09,098][INFO][infinite.core] Login Button Pressed
+[2015-01-20 16:00:09,147][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 16:00:09,169][INFO][infinite.core] successfully logged in admin
+[2015-01-20 16:00:32,742][INFO][infinite.core] Login Button Pressed
+[2015-01-20 16:00:32,768][INFO][infinite.core] successfully logged in admin to database
+[2015-01-20 16:00:32,806][INFO][infinite.core] successfully logged in admin

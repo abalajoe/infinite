@@ -30,6 +30,7 @@
              (template data))]
       report)
     (catch Exception e
-      (log/error (.getMessage e)))))
+      (log/error (.getMessage e))
+      false)))
 
-;(generate-pdf "emp list" admin-template admin-report-data "report.pdf" "ID" "User" "Password" "Type")
+;(if (= nil (generate-pdf "emp list" admin-template admin-report-data "r.pdf" "ID" "User" "Password" "Type"))1 0)
